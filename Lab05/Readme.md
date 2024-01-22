@@ -20,3 +20,6 @@ per each word is defined by myself for the design.
 Memory usage can be checked it at CAD.area in 02_SYN/Report/ folder.
 
 All numbers are signed integers and expressed in 2’s complement format. 
+
+
+![image](https://github.com/nheyr08/Integrated-Circuit-Laboratory/assets/64657102/e3b02e5b-321c-4d04-a007-89d85c3f0e78)

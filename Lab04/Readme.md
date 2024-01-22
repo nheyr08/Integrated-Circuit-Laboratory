@@ -8,6 +8,7 @@ The primary application of Siamese neural network is in tasks that involve deter
 similarity or dissimilarity between two input samples. For example, Siamese networks are commonly
 used in tasks like face recognition, signature verification, one-shot learning, and similarity-based
 recommender systems. In this lab such a Neural Network is implemented using the specifications.
+* In this lab, I used several IEEE floating point number IP from Designware.
 
 ![image](https://github.com/nheyr08/Integrated-Circuit-Laboratory/assets/64657102/18bdd338-83d5-4bb7-adad-54a1ed636bc2)
 

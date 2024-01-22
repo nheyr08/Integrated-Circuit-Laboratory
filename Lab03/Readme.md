@@ -1,4 +1,4 @@
-## AXI-SPI DataBridge
+## AXI-SPI Data Bridge
 
 In this lab, the task is to Write my own PATTERN and develop a pseudo SD card by referencing 
 the provided design specifications and the SD card protocol. 

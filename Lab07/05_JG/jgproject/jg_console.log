@@ -1,0 +1,69 @@
+2023-11-14 01:28:59.387625 (61184) main____ INFO    ----------------------------------------
+2023-11-14 01:28:59.387694 (61184) main____ INFO    Jasper version info
+2023-11-14 01:28:59.387701 (61184) main____ INFO      tool      : Jasper 2023.09
+2023-11-14 01:28:59.387706 (61184) main____ INFO      version   : 2023.09p001 64 bits
+2023-11-14 01:28:59.387710 (61184) main____ INFO      build date: 2023.10.25 14:35:20 UTC
+2023-11-14 01:28:59.387712 (61184) main____ INFO    ----------------------------------------
+2023-11-14 01:28:59.387715 (61184) main____ INFO    Runtime info:
+2023-11-14 01:28:59.387719 (61184) main____ INFO      platform  : Linux 3.10.0-1160.88.1.el7.x86_64 x86_64
+2023-11-14 01:28:59.387724 (61184) main____ INFO      hostname  : ee30
+2023-11-14 01:28:59.387727 (61184) main____ INFO      pid       : 61184
+2023-11-14 01:28:59.387730 (61184) main____ INFO      arguments : '-style' 'windows' '-cdc' 'jg.tcl'
+2023-11-14 01:28:59.387734 (61184) main____ INFO      locale    : ANSI_X3.4-1968
+2023-11-14 01:28:59.387736 (61184) main____ INFO    ----------------------------------------
+2023-11-14 01:28:59.387739 (61184) main____ INFO    System resource limits info:
+2023-11-14 01:28:59.387742 (61184) main____ INFO      virtual memory: unlimited
+2023-11-14 01:28:59.387746 (61184) main____ INFO      cpu time      : unlimited
+2023-11-14 01:28:59.387751 (61184) main____ INFO      processes     : 4096
+2023-11-14 01:28:59.387758 (61184) main____ INFO      stack size    : 8388608 B
+2023-11-14 01:28:59.387762 (61184) main____ INFO      core file size: 0 B
+2023-11-14 01:28:59.387765 (61184) main____ INFO      open files    : 1024
+2023-11-14 01:28:59.387768 (61184) main____ INFO      file size     : unlimited
+2023-11-14 01:28:59.387771 (61184) main____ INFO    ----------------------------------------
+2023-11-14 01:28:59.387773 (61184) main____ INFO    Memory statistics:
+2023-11-14 01:28:59.387776 (61184) main____ INFO      total physical memory  : 1056530580 kB
+2023-11-14 01:28:59.387779 (61184) main____ INFO      free physical memory   : 924516636 kB
+2023-11-14 01:28:59.387782 (61184) main____ INFO      committed address space: 63334268 kB
+2023-11-14 01:28:59.387784 (61184) main____ INFO    ----------------------------------------
+2023-11-14 01:28:59.388330 (61184) main____ INFO    Important environment variables:
+2023-11-14 01:28:59.388341 (61184) main____ INFO      CDS_AUTO_64BIT     : 'ALL'
+2023-11-14 01:28:59.388346 (61184) main____ INFO      CDS_LOAD_ENV       : 'CSF'
+2023-11-14 01:28:59.388350 (61184) main____ INFO      CDS_Netlisting_Mode: 'Analog'
+2023-11-14 01:28:59.388354 (61184) main____ INFO      DISPLAY            : 'localhost:26.0'
+2023-11-14 01:28:59.388359 (61184) main____ INFO      JASPER_INSTALL_DIR : '/usr/cad/cadence/JASPER/jasper_2023.09p001'
+2023-11-14 01:28:59.388363 (61184) main____ INFO      JASPER_KERNEL_CHECK: '1'
+2023-11-14 01:28:59.388367 (61184) main____ INFO      JASPER_OS_CHECK    : '1'
+2023-11-14 01:28:59.388372 (61184) main____ INFO      LM_LICENSE_FILE    : '26585@lshc:5280@lshc:1717@lshc:5280@lstn:5280@lstc:26585@lstn:26585@lstc:1717@lstc:1717@lstn:'
+2023-11-14 01:28:59.388378 (61184) main____ INFO    ----------------------------------------
+2023-11-14 01:28:59.389086 (61184) lic_core INFO    Initializing license system ...
+2023-11-14 01:28:59.392320 (61184) lic_core INFO    ... license system initialized.
+2023-11-14 01:28:59.411096 (61184) lic__man INFO    Claim 'main' for <ui>.
+2023-11-14 01:28:59.411119 (61184) lic_core INFO    (1) checking out 'jasper_interactive' ...
+2023-11-14 01:28:59.475710 (61184) lic_core INFO    ... (1) checkout succeeded
+2023-11-14 01:28:59.475742 (61184) lic__man INFO    Claim 'cdc' for <ui>.
+2023-11-14 01:28:59.475752 (61184) lic_core INFO    (2) checking out 'jasper_cdc' ...
+2023-11-14 01:28:59.636914 (61184) lic_core INFO    ... (2) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2023-11-14 01:28:59.636959 (61184) lic_core INFO    (3) checking out 'jasper_dao' ...
+2023-11-14 01:28:59.705359 (61184) lic_core INFO    ... (3) checkout succeeded
+2023-11-14 01:28:59.706052 (61184) main____ INFO    Tool inactivity delay is 480000 ms.
+2023-11-14 01:29:00.169649 (61184) lic__man INFO    Claim 'cdc' for <ui>.
+2023-11-14 01:29:00.547514 (61184) lic__man INFO    Unclaim 'cdc' for <ui>.
+2023-11-14 01:29:00.547548 (61184) lic__man INFO    Claim 'cdc' for <ui>.
+2023-11-14 01:29:00.573385 (61184) session_ INFO    Starting analysis session with session id 'session_0' (launcher: <local>) ...
+2023-11-14 01:29:00.576628 (61184) session_ INFO    Analysis session with session id 'session_0' started (pid: 62394)
+2023-11-14 01:29:01.351565 (61184) session_ INFO    Analysis session 'session_0' connected to the console (host: 127.0.0.1:52174)
+2023-11-14 01:29:01.611149 (61184) lic__man INFO    Claim 'cdc' for 'session_0'.
+2023-11-14 01:29:01.790697 (61184) main____ INFO    Releasing console memory by request of analysis session 'session_0'.
+2023-11-14 01:29:01.791048 (61184) lic__man INFO    Unclaim everything for 'session_0'.
+2023-11-14 01:29:04.303593 (61184) lic__man INFO    Unclaim everything for 'session_0'.
+2023-11-14 01:29:05.351520 (61184) lic__man INFO    Claim 'cdc' for 'session_0'.
+2023-11-14 01:29:07.380259 (61184) lic__man INFO    Claim 'cdc' for 'session_0'.
+2023-11-14 01:29:07.380280 (61184) lic__man INFO    Claim 'cdc' for 'session_0/prove-0'.
+2023-11-14 01:29:07.672307 (61184) lic__man INFO    Unclaim everything for 'session_0/prove-0'.
+2023-11-14 01:29:07.774136 (61184) lic__man INFO    Claim 'cdc' for 'session_0'.
+2023-11-14 01:29:07.774163 (61184) lic__man INFO    Claim 'cdc' for 'session_0/prove-1'.
+2023-11-14 08:57:49.976332 (61184) main____ INFO    About to exit: requested from GUI
+2023-11-14 08:57:50.241200 (61184) session_ INFO    Analysis session 'session_0' disconnected.
+2023-11-14 08:57:50.257755 (61184) lic_core INFO    (1) checkin jasper_interactive
+2023-11-14 08:57:50.259301 (61184) lic_core INFO    (3) checkin jasper_dao
+2023-11-14 08:57:50.262481 (61184) main____ INFO    Exiting with status 0.

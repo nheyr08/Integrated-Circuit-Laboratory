@@ -1,0 +1,1446 @@
+# ----------------------------------------
+# Jasper Version Info
+# tool      : Jasper 2023.09
+# platform  : Linux 3.10.0-1160.88.1.el7.x86_64
+# version   : 2023.09p001 64 bits
+# build date: 2023.10.25 14:35:20 UTC
+# ----------------------------------------
+# started   : 2023-11-14 01:22:42 CST
+# hostname  : ee24.EEHPC
+# pid       : 111767
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:39368' '-style' 'windows' '-data' 'AAAAjHicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcPIgAwYAxtQaAYGVphCmBImIOZg0GVIZkgBYgYGHoYshnQGPYYSIC8HzAcAU+INbA==' '-proj' '/RAID2/COURSE/iclab/iclab129/Lab07/Exercise/05_JG/jgproject/sessionLogs/session_0' '-init' '-hidden' '/RAID2/COURSE/iclab/iclab129/Lab07/Exercise/05_JG/jgproject/.tmp/.initCmds.tcl' 'jg.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2023 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc.
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+Jasper Apps Analysis Session - /RAID2/COURSE/iclab/iclab129/Lab07/Exercise/05_JG/jgproject/sessionLogs/session_0
+
+WARNING (WG017): [session]: The system's locale is "ANSI_X3.4-1968", which is not UTF-8. Non-ASCII characters might not be handled correctly.
+WARNING (WG017): [jg_console]: The system's locale is "ANSI_X3.4-1968", which is not UTF-8. Non-ASCII characters might not be handled correctly.
+INFO: successfully checked out licenses "jasper_interactive" and "jasper_dao".
+INFO: reading configuration file "/RAID2/COURSE/iclab/iclab129/.config/cadence/jasper.conf".
+% check_cdc -init
+% clear -all
+INFO (IPF121): Cleared environment completely for new design analysis.
+% 
+% ## --------------- Environment Setting ---------------- ##
+% set_schematic_viewer_simplify_concatenations on
+% set_reset_max_iterations 2000
+% 
+% ## ----------------- Setting Variables ---------------- ##
+% set design_path "../01_RTL"
+../01_RTL
+% set mem_path "../04_MEM"
+../04_MEM
+% set report_dir "./Report"
+./Report
+% set DESIGN "PRGN_TOP"
+PRGN_TOP
+% set MEM "DUAL_64X32X1BM1"
+DUAL_64X32X1BM1
+% 
+% ## ------------- Loading Custom Rule File ------------- ##
+% 
+% ## --------------- Analyzing the Design --------------- ##
+% analyze -sv ${mem_path}/$MEM\.v
+[-- (VERI-1482)] Analyzing Verilog file '/usr/cad/cadence/JASPER/jasper_2023.09p001/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '../04_MEM/DUAL_64X32X1BM1.v'
+% analyze -sv ${design_path}/$DESIGN\.v 
+[-- (VERI-1482)] Analyzing Verilog file '../01_RTL/PRGN_TOP.v'
+[INFO (VERI-1328)] ../01_RTL/PRGN_TOP.v(1): analyzing included file '../01_RTL/DESIGN_module.v'
+[INFO (VERI-1328)] ../01_RTL/PRGN_TOP.v(2): analyzing included file '../01_RTL/synchronizer/Handshake_syn.v'
+[INFO (VERI-1328)] ../01_RTL/PRGN_TOP.v(3): analyzing included file '../01_RTL/synchronizer/FIFO_syn.v'
+[WARN (VERI-1199)] ../01_RTL/synchronizer/FIFO_syn.v(51): parameter 'EMPTY' becomes localparam in 'FIFO_syn' with formal parameter declaration list
+[WARN (VERI-1199)] ../01_RTL/synchronizer/FIFO_syn.v(51): parameter 'WRITE' becomes localparam in 'FIFO_syn' with formal parameter declaration list
+[WARN (VERI-1199)] ../01_RTL/synchronizer/FIFO_syn.v(51): parameter 'READ' becomes localparam in 'FIFO_syn' with formal parameter declaration list
+[WARN (VERI-1199)] ../01_RTL/synchronizer/FIFO_syn.v(51): parameter 'FULL' becomes localparam in 'FIFO_syn' with formal parameter declaration list
+[WARN (VERI-1199)] ../01_RTL/synchronizer/FIFO_syn.v(52): parameter 'EMPTY_r' becomes localparam in 'FIFO_syn' with formal parameter declaration list
+[WARN (VERI-1199)] ../01_RTL/synchronizer/FIFO_syn.v(52): parameter 'WRITE_r' becomes localparam in 'FIFO_syn' with formal parameter declaration list
+[WARN (VERI-1199)] ../01_RTL/synchronizer/FIFO_syn.v(52): parameter 'READ_r' becomes localparam in 'FIFO_syn' with formal parameter declaration list
+[WARN (VERI-1199)] ../01_RTL/synchronizer/FIFO_syn.v(52): parameter 'FULL_r' becomes localparam in 'FIFO_syn' with formal parameter declaration list
+[WARN (VERI-1214)] ../01_RTL/synchronizer/FIFO_syn.v(68): assignment to input 'clk2_fifo_flag2'
+[WARN (VERI-1199)] ../01_RTL/synchronizer/FIFO_syn.v(379): parameter 'N' becomes localparam in 'FIFO_syn' with formal parameter declaration list
+[INFO (VERI-1328)] ../01_RTL/PRGN_TOP.v(4): analyzing included file '../01_RTL/synchronizer/NDFF_syn.v'
+[INFO (VERI-1328)] ../01_RTL/PRGN_TOP.v(5): analyzing included file '../01_RTL/synchronizer/PULSE_syn.v'
+[INFO (VERI-1328)] ../01_RTL/PRGN_TOP.v(6): analyzing included file '../01_RTL/synchronizer/NDFF_BUS_syn.v'
+% 
+% ## ----------------- Reading Liberty ------------------ ##
+% liberty -load ${mem_path}/$MEM\_WC.lib 
+INFO (ILIB001): Finished reading library DUAL_64X32X1BM1_WC. Extracted 1 cells from it.
+WARNING (WLIB008): Missing primary power pin in cell "DUAL_64X32X1BM1".
+WARNING (WLIB009): Missing primary ground pin in cell "DUAL_64X32X1BM1".
+% 
+% ## -------------- Elaborating the design -------------- ##
+% elaborate -top $DESIGN 
+INFO (ILIB002): Liberty cell "DUAL_64X32X1BM1" from file "/RAID2/COURSE/iclab/iclab129/Lab07/Exercise/04_MEM/DUAL_64X32X1BM1_WC.lib" will be used during elaboration.
+[-- (VERI-1482)] Analyzing Verilog file '/RAID2/COURSE/iclab/iclab129/Lab07/Exercise/05_JG/jgproject/sessionLogs/session_0/liberty/jg_liberty_module_DUAL_64X32X1BM1_WC1' into library 'DUAL_64X32X1BM1_WC'
+INFO (ISW003): Top module name is "PRGN_TOP".
+[INFO (HIER-8002)] ../01_RTL/PRGN_TOP.v(170): Disabling old hierarchical reference handler
+[WARN (VERI-1927)] ../01_RTL/synchronizer/FIFO_syn.v(361): port 'DOA0' remains unconnected for this instance
+[INFO (VERI-1018)] ../01_RTL/DESIGN_module.v(3): compiling module 'CLK_1_MODULE'
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(67): expression size 32 truncated to fit in target size 8
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(68): expression size 32 truncated to fit in target size 8
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(69): expression size 32 truncated to fit in target size 8
+[INFO (VERI-1018)] ../01_RTL/synchronizer/NDFF_syn.v(2): compiling module 'NDFF_syn'
+[INFO (VERI-1018)] ../01_RTL/synchronizer/Handshake_syn.v(1): compiling module 'Handshake_syn'
+[INFO (VERI-1018)] ../01_RTL/DESIGN_module.v(106): compiling module 'CLK_2_MODULE'
+[INFO (VERI-2571)] ../01_RTL/DESIGN_module.v(155): extracting RAM for identifier 'nord'
+[WARN (VERI-9033)] ../01_RTL/DESIGN_module.v(155): array nord (size 8192) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[INFO (VERI-2571)] ../01_RTL/DESIGN_module.v(156): extracting RAM for identifier 'sud'
+[WARN (VERI-9033)] ../01_RTL/DESIGN_module.v(156): array sud (size 8192) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[INFO (VERI-2571)] ../01_RTL/DESIGN_module.v(157): extracting RAM for identifier 'nordest'
+[WARN (VERI-9033)] ../01_RTL/DESIGN_module.v(157): array nordest (size 8192) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[INFO (VERI-2571)] ../01_RTL/DESIGN_module.v(158): extracting RAM for identifier 'piblo'
+[WARN (VERI-9033)] ../01_RTL/DESIGN_module.v(158): array piblo (size 8192) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[INFO (VERI-2571)] ../01_RTL/DESIGN_module.v(159): extracting RAM for identifier 'soti'
+[WARN (VERI-9033)] ../01_RTL/DESIGN_module.v(159): array soti (size 8192) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(247): expression size 32 truncated to fit in target size 13
+[WARN (VERI-9005)] ../01_RTL/DESIGN_module.v(274): 13-bit index expression 'ctr_2' is larger than the required 9 bits. This might lead to an out-of-bound access
+[INFO (VERI-1018)] ../01_RTL/synchronizer/NDFF_BUS_syn.v(1): compiling module 'NDFF_BUS_syn'
+[INFO (VERI-1018)] ../04_MEM/DUAL_64X32X1BM1.v(64): compiling module 'DUAL_64X32X1BM1'
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(94): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(95): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(96): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1198): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1199): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1200): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1201): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1202): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1203): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1204): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1205): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1206): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1207): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1208): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1209): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1210): Using only the typical value of the min:typ:max expression
+[WARN (VERI-8004)] ../04_MEM/DUAL_64X32X1BM1.v(1211): Using only the typical value of the min:typ:max expression
+[WARN (VERI-1060)] ../04_MEM/DUAL_64X32X1BM1.v(476): 'initial' construct is ignored
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(480): 'LastClkAEdge' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(483): 'latch_last_A' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(484): 'latch_last_DIA' should be on the sensitivity list
+[WARN (VERI-1142)] ../04_MEM/DUAL_64X32X1BM1.v(1171): system task 'display' is ignored for synthesis
+[WARN (VERI-1142)] ../04_MEM/DUAL_64X32X1BM1.v(1170): system task 'display' is ignored for synthesis
+[WARN (VERI-1142)] ../04_MEM/DUAL_64X32X1BM1.v(1185): system task 'display' is ignored for synthesis
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X32X1BM1.v(851): system function call 'time' is not supported
+[WARN (VERI-1142)] ../04_MEM/DUAL_64X32X1BM1.v(1169): system task 'display' is ignored for synthesis
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X32X1BM1.v(861): event trigger is ignored
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X32X1BM1.v(885): system function call 'time' is not supported
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X32X1BM1.v(892): system function call 'time' is not supported
+[WARN (VERI-1142)] ../04_MEM/DUAL_64X32X1BM1.v(1172): system task 'display' is ignored for synthesis
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X32X1BM1.v(905): event trigger is ignored
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X32X1BM1.v(910): event trigger is ignored
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X32X1BM1.v(927): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X32X1BM1.v(933): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X32X1BM1.v(934): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X32X1BM1.v(935): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(488): 'CSA_' should be on the sensitivity list
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X32X1BM1.v(488): system function call 'time' is not supported
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(489): 'A_' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(490): 'DIA_' should be on the sensitivity list
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X32X1BM1.v(492): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(510): 'LastClkBEdge' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(513): 'latch_last_B' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(514): 'latch_last_DIB' should be on the sensitivity list
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X32X1BM1.v(965): system function call 'time' is not supported
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X32X1BM1.v(975): event trigger is ignored
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X32X1BM1.v(999): system function call 'time' is not supported
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X32X1BM1.v(1005): system function call 'time' is not supported
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X32X1BM1.v(1018): event trigger is ignored
+[WARN (VERI-1029)] ../04_MEM/DUAL_64X32X1BM1.v(1023): event trigger is ignored
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X32X1BM1.v(1040): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X32X1BM1.v(1046): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X32X1BM1.v(1047): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X32X1BM1.v(1048): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(518): 'CSB_' should be on the sensitivity list
+[WARN (VERI-1141)] ../04_MEM/DUAL_64X32X1BM1.v(518): system function call 'time' is not supported
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(519): 'B_' should be on the sensitivity list
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(520): 'DIB_' should be on the sensitivity list
+[WARN (VERI-1017)] ../04_MEM/DUAL_64X32X1BM1.v(522): case condition never applies due to comparison with 'x' or 'z'
+[WARN (VERI-1157)] ../04_MEM/DUAL_64X32X1BM1.v(638): use of events is not supported; event is ignored
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(643): 'DOA_tmp' should be on the sensitivity list
+[WARN (VDB-1000)] ../04_MEM/DUAL_64X32X1BM1.v(641): net 'NODELAYA' is constantly driven from multiple places
+[WARN (VDB-1001)] ../04_MEM/DUAL_64X32X1BM1.v(586): found another driver here
+[WARN (VDB-1001)] ../04_MEM/DUAL_64X32X1BM1.v(507): found another driver here
+[WARN (VERI-1157)] ../04_MEM/DUAL_64X32X1BM1.v(646): use of events is not supported; event is ignored
+[WARN (VERI-1221)] ../04_MEM/DUAL_64X32X1BM1.v(651): 'DOB_tmp' should be on the sensitivity list
+[WARN (VDB-1000)] ../04_MEM/DUAL_64X32X1BM1.v(649): net 'NODELAYB' is constantly driven from multiple places
+[WARN (VDB-1001)] ../04_MEM/DUAL_64X32X1BM1.v(635): found another driver here
+[WARN (VDB-1001)] ../04_MEM/DUAL_64X32X1BM1.v(537): found another driver here
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X32X1BM1.v(1376): system timing check $period is ignored for synthesis
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X32X1BM1.v(1377): system timing check $width is ignored for synthesis
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X32X1BM1.v(1378): system timing check $width is ignored for synthesis
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X32X1BM1.v(1379): system timing check $period is ignored for synthesis
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X32X1BM1.v(1380): system timing check $width is ignored for synthesis
+[WARN (VERI-9052)] ../04_MEM/DUAL_64X32X1BM1.v(1381): system timing check $width is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1383): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1384): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1385): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1386): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1387): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1388): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1389): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1390): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1391): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1392): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1393): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1394): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1395): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1396): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1397): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1398): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1399): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1400): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1401): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1402): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1403): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1404): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1405): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1406): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1407): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1408): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1409): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1410): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1411): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1412): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1413): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1414): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1415): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1416): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1417): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1418): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1419): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1420): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1421): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1422): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1423): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1424): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1425): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1426): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1427): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1428): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1429): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1430): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1431): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1432): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1433): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1434): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1435): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1436): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1437): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1438): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1439): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1440): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1441): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1442): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1443): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1444): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1445): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1446): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1449): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1450): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1451): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1452): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1453): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1454): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1455): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1456): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1457): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1458): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1459): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1460): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1461): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1462): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1463): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1464): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1465): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1466): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1467): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1468): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1469): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1470): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1471): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1472): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1473): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1474): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1475): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1476): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1477): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1478): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1479): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1480): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1481): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1482): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1483): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1484): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1485): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1486): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1487): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1488): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1489): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1490): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1491): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1492): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1493): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1494): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1495): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1496): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1497): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1498): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1499): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1500): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1501): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1502): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1503): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1504): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1505): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1506): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1507): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1508): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1509): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1510): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1511): path declaration is ignored for synthesis
+[WARN (VERI-1143)] ../04_MEM/DUAL_64X32X1BM1.v(1512): path declaration is ignored for synthesis
+[WARN (VDB-1000)] ../04_MEM/DUAL_64X32X1BM1.v(586): net 'Memory[63][31]' is constantly driven from multiple places
+[INFO (VERI-1018)] ../01_RTL/synchronizer/FIFO_syn.v(1): compiling module 'FIFO_syn'
+[WARN (VERI-2457)] ../01_RTL/synchronizer/FIFO_syn.v(394): assignment and/or driver for 'bin' inside static function 'g2binary' is not preserved
+[WARN (VERI-1209)] ../01_RTL/synchronizer/FIFO_syn.v(100): expression size 32 truncated to fit in target size 8
+[WARN (VERI-1209)] ../01_RTL/synchronizer/FIFO_syn.v(133): expression size 32 truncated to fit in target size 6
+[WARN (VERI-1209)] ../01_RTL/synchronizer/FIFO_syn.v(137): expression size 32 truncated to fit in target size 1
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(152): actual bit length 6 differs from formal bit length 7 for port 'bin'
+[WARN (VERI-2457)] ../01_RTL/synchronizer/FIFO_syn.v(383): assignment and/or driver for 'gray' inside static function 'bin2gray_func' is not preserved
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(181): actual bit length 6 differs from formal bit length 7 for port 'bin'
+[WARN (VERI-1209)] ../01_RTL/synchronizer/FIFO_syn.v(195): expression size 32 truncated to fit in target size 6
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(297): actual bit length 32 differs from formal bit length 1 for port 'DIB0'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(298): actual bit length 32 differs from formal bit length 1 for port 'DIB1'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(299): actual bit length 32 differs from formal bit length 1 for port 'DIB2'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(300): actual bit length 32 differs from formal bit length 1 for port 'DIB3'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(301): actual bit length 32 differs from formal bit length 1 for port 'DIB4'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(302): actual bit length 32 differs from formal bit length 1 for port 'DIB5'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(303): actual bit length 32 differs from formal bit length 1 for port 'DIB6'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(304): actual bit length 32 differs from formal bit length 1 for port 'DIB7'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(305): actual bit length 32 differs from formal bit length 1 for port 'DIB8'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(306): actual bit length 32 differs from formal bit length 1 for port 'DIB9'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(307): actual bit length 32 differs from formal bit length 1 for port 'DIB10'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(308): actual bit length 32 differs from formal bit length 1 for port 'DIB11'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(309): actual bit length 32 differs from formal bit length 1 for port 'DIB12'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(310): actual bit length 32 differs from formal bit length 1 for port 'DIB13'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(311): actual bit length 32 differs from formal bit length 1 for port 'DIB14'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(312): actual bit length 32 differs from formal bit length 1 for port 'DIB15'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(313): actual bit length 32 differs from formal bit length 1 for port 'DIB16'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(314): actual bit length 32 differs from formal bit length 1 for port 'DIB17'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(315): actual bit length 32 differs from formal bit length 1 for port 'DIB18'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(316): actual bit length 32 differs from formal bit length 1 for port 'DIB19'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(317): actual bit length 32 differs from formal bit length 1 for port 'DIB20'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(318): actual bit length 32 differs from formal bit length 1 for port 'DIB21'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(319): actual bit length 32 differs from formal bit length 1 for port 'DIB22'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(320): actual bit length 32 differs from formal bit length 1 for port 'DIB23'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(321): actual bit length 32 differs from formal bit length 1 for port 'DIB24'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(322): actual bit length 32 differs from formal bit length 1 for port 'DIB25'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(323): actual bit length 32 differs from formal bit length 1 for port 'DIB26'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(324): actual bit length 32 differs from formal bit length 1 for port 'DIB27'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(325): actual bit length 32 differs from formal bit length 1 for port 'DIB28'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(326): actual bit length 32 differs from formal bit length 1 for port 'DIB29'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(327): actual bit length 32 differs from formal bit length 1 for port 'DIB30'
+[WARN (VERI-1330)] ../01_RTL/synchronizer/FIFO_syn.v(328): actual bit length 32 differs from formal bit length 1 for port 'DIB31'
+[WARN (VERI-8028)] ../01_RTL/synchronizer/FIFO_syn.v(244): missing/open ports on instance u_dual_sram of module DUAL_64X32X1BM1
+[INFO (VERI-1018)] ../01_RTL/DESIGN_module.v(285): compiling module 'CLK_3_MODULE'
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(357): expression size 32 truncated to fit in target size 9
+[WARN (VERI-1209)] ../01_RTL/DESIGN_module.v(358): expression size 32 truncated to fit in target size 9
+[INFO (VERI-1018)] ../01_RTL/PRGN_TOP.v(8): compiling module 'PRGN_TOP'
+[WARN (VDB-1002)] ../01_RTL/PRGN_TOP.v(49): net 'clk1_handshake_flag1' does not have a driver
+[WARN (VDB-1002)] ../01_RTL/PRGN_TOP.v(50): net 'clk1_handshake_flag2' does not have a driver
+[WARN (VDB-1002)] ../01_RTL/PRGN_TOP.v(54): net 'handshake_clk2_flag1' does not have a driver
+[WARN (VDB-1002)] ../01_RTL/PRGN_TOP.v(55): net 'handshake_clk2_flag2' does not have a driver
+[WARN (VDB-1002)] ../01_RTL/PRGN_TOP.v(60): net 'clk2_fifo_flag2' does not have a driver
+[WARN (VDB-1002)] ../01_RTL/PRGN_TOP.v(65): net 'fifo_clk3_flag2' does not have a driver
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          9 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (9 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      11 (9 synthesized)
+  Number of analyzed VHDL entities        0 (0 synthesized)
+WARNING (WNL010): Input port "clk2_fifo_flag2" of module "FIFO_syn" is also being driven at ../01_RTL/synchronizer/FIFO_syn.v(68).
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+INFO (IMDS005): Number of multiple-driven bits in design: 2424. Use "get_design_info -list multiple_driven" for more information.
+PRGN_TOP
+[<embedded>] % 
+[<embedded>] % ## ---------------- Decalaring Resets ----------------- ##
+[<embedded>] % config_rtlds -reset -async rst_n -polarity low  
+[<embedded>] % 
+[<embedded>] % ## ------------------- Reading SDC -------------------- ##
+[<embedded>] % read_sdc $DESIGN\_SYN.sdc
+WARNING (WCDC241): At least one SDC clock exceeded maximum factor 10 after normalization.
+    The proportions of their periods cannot be kept among their factors.
+WARNING (WCK028): The clock "clk1" was declared with an absolute factor of 14.
+    The presence of slow clocks - with absolute factor greater than 10 - can cause major performance issues during proof.
+WARNING (WCK028): The clock "clk3" was declared with an absolute factor of 20.
+    The presence of slow clocks - with absolute factor greater than 10 - can cause major performance issues during proof.
+INFO (ISDC001): SDC file "PRGN_TOP_SYN.sdc" was successfully processed. The CTE log file can be found at cte.log.
+========================================================================================
+                                Command Execution Report                                
+========================================================================================
+              command name              | successes | failures  |  ignored  |   total   
+----------------------------------------------------------------------------------------
+create_clock                            |     3     |     0     |     0     |     3     
+get_clocks                              |    18     |     0     |     0     |    18     
+get_ports                               |    357    |     0     |     0     |    357    
+set_clock_groups                        |     1     |     0     |     0     |     1     
+set_clock_transition                    |     0     |     0     |    12     |    12     
+set_clock_uncertainty                   |     0     |     0     |     3     |     3     
+set_input_delay                         |    70     |     0     |     0     |    70     
+set_input_transition                    |     0     |     0     |    74     |    74     
+set_load                                |     0     |     0     |    33     |    33     
+set_max_capacitance                     |     0     |     0     |    37     |    37     
+set_max_fanout                          |     0     |     0     |    37     |    37     
+set_max_transition                      |     0     |     0     |    37     |    37     
+set_output_delay                        |    66     |     0     |     0     |    66     
+set_units                               |     0     |     0     |     1     |     1     
+set_wire_load_mode                      |     0     |     0     |     1     |     1     
+set_wire_load_model                     |     0     |     0     |     1     |     1     
+----------------------------------------------------------------------------------------
+[<embedded>] % 
+[<embedded>] % ## --------------- Defining False Path ---------------- ##
+[<embedded>] % 
+[<embedded>] % ## ---------------- Defining Constants ---------------- ##
+[<embedded>] % # config_rtlds -rule -parameter {fifo_detection = true}
+[<embedded>] % # config_rtlds -rule -parameter {handshake_detection = true}
+[<embedded>] % 
+[<embedded>] % ## ------------ Clock Association of Ports ------------ ##
+[<embedded>] % 
+[<embedded>] % ## --------------- Structural Analysis ---------------- ##
+[<embedded>] % # Find Clock Domains
+[<embedded>] % check_cdc -clock_domain -find
+INFO (ICDC030): Only resets declared with the "config_rtlds -reset" command will be considered in the structural analysis.
+INFO (ICDC019): 01:22:47 Creating Abstractions for Hierarchical Flow (step 1 of 1).
+INFO (IRS029): Starting reset analysis: phase 1 of 4.
+INFO (IRS030): Running reset analysis: phase 2 of 4.
+INFO (IRS031): Running reset analysis: phase 3 of 4.
+INFO (IRS020): Starting the reset analysis simulation with a limit of 2000 iterations (phase 4 of 4).
+INFO (IRS024): Reset iterations 0 to 199 analyzed.
+INFO (IRS024): Reset iterations 200 to 399 analyzed.
+INFO (IRS024): Reset iterations 400 to 599 analyzed.
+INFO (IRS024): Reset iterations 600 to 799 analyzed.
+INFO (IRS024): Reset iterations 800 to 841 analyzed.
+INFO (IRS018): Reset analysis simulation executed for 840 iterations. Assigned values for 421 of 421 design flops, 0 of 9034 design latches, 0 of 0 internal elements.
+INFO (IRS039): Reset analysis complete.
+INFO (ICDC019): 01:22:47 Detecting CDC units (step 1 of 1).
+INFO (ICDC019): 01:22:47 Getting information from clock API (step 1 of 1).
+INFO (ICDC019): 01:22:47 Finding design clocks (step 1 of 1).
+INFO (ICDC019): 01:22:48 Add flop units (step 1 of 1).
+INFO (ICDC019): 01:22:48 Apply clock sense (step 1 of 1).
+INFO (ICDC019): 01:22:48 Building CDC unit graph (step 1 of 1).
+INFO (IGPH001): Filtering Graph (10% completed).
+INFO (IGPH001): Filtering Graph (20% completed).
+INFO (IGPH001): Filtering Graph (30% completed).
+INFO (IGPH001): Filtering Graph (40% completed).
+INFO (IGPH001): Filtering Graph (50% completed).
+INFO (IGPH001): Filtering Graph (60% completed).
+INFO (IGPH001): Filtering Graph (70% completed).
+INFO (IGPH001): Filtering Graph (80% completed).
+INFO (IGPH001): Filtering Graph (90% completed).
+INFO (IGPH001): Filtering Graph (100% completed).
+INFO (ICDC019): 01:22:48 Adding parent relationships for abstracted clocks (step 1 of 1).
+INFO (ICDC019): 01:22:48 Building design clock tree (step 1 of 1).
+INFO (ICDC019): 01:22:48 Update units status (step 1 of 1).
+INFO (ICDC019): 01:22:48 Update Clock domains status (step 1 of 1).
+INFO (ICDC019): 01:22:48 Add clock related violations (step 1 of 1).
+INFO (ICDC019): 01:22:48 Add integration violations (step 1 of 1).
+INFO (ICDC019): 01:22:48 Adding Hierarchy Waiver (step 1 of 1).
+Clock Domains Found: 3
+3
+[<embedded>] % # Find CDC pairs
+[<embedded>] % check_cdc -pair -find
+INFO (ICDC020): 01:22:48 CDC Pairs Detection (20% completed).
+INFO (ICDC020): 01:22:48 CDC Pairs Detection (30% completed).
+INFO (ICDC020): 01:22:48 CDC Pairs Detection (50% completed).
+INFO (ICDC020): 01:22:48 CDC Pairs Detection (70% completed).
+INFO (ICDC020): 01:22:48 CDC Pairs Detection (80% completed).
+INFO (ICDC020): 01:22:48 CDC Pairs Detection (100% completed).
+INFO (IGPH001): Filtering Graph (10% completed).
+INFO (IGPH001): Filtering Graph (20% completed).
+INFO (IGPH001): Filtering Graph (30% completed).
+INFO (IGPH001): Filtering Graph (40% completed).
+INFO (IGPH001): Filtering Graph (50% completed).
+INFO (IGPH001): Filtering Graph (60% completed).
+INFO (IGPH001): Filtering Graph (70% completed).
+INFO (IGPH001): Filtering Graph (80% completed).
+INFO (IGPH001): Filtering Graph (90% completed).
+INFO (IGPH001): Filtering Graph (100% completed).
+CDC Pairs Found: 20
+20
+[<embedded>] % # Find Schemes
+[<embedded>] % # check_cdc -scheme -add ndff -module NDFF_syn -map {{dout Q} {data D}}
+[<embedded>] % # check_cdc -scheme -add ndff_bus -module NDFF_BUS_syn -map {{dout Q} {data D}}
+[<embedded>] % # check_cdc -scheme -add pulse -module PULSE_syn -map {{data P} {dout OUT} {enable IN}}
+[<embedded>] % check_cdc -scheme -add handshake -module Handshake_syn -map {{data din} {sreq sreq} {dreq dreq} {dack dack} {sack sack}}
+Handshake_syn.din
+[<embedded>] % # check_cdc -scheme -add mux_pulse -module MUX_PULSE_syn -map {{data data} {enable sready_in} {sready u_ready_pulse.P} {dready dready} {dout dout}}
+[<embedded>] % check_cdc -scheme -add fifo -module FIFO_syn -map {{rdata rdata} {wdata wdata} {wptr wptr} {rptr rptr} {wfull wfull} {rempty rempty} {winc winc} {rinc rinc}}
+FIFO_syn.rdata
+[<embedded>] % check_cdc -scheme -find
+INFO (ICDC019): 01:22:48 Finding user-defined schemes (step 1 of 3).
+WARNING (WCDC224): Unable to add "u_FIFO_syn" instance of the user-defined scheme "FIFO_syn.rdata". Reason: "Unable to map/derive the parameter 'u_FIFO_syn.wptr'".
+WARNING (WCDC224): Unable to add "u_Handshake_syn" instance of the user-defined scheme "Handshake_syn.din". Reason: "The tool couldn't find the control schemes.".
+INFO (ICDC019): 01:22:48 Finding external synchronizers (step 2 of 3).
+INFO (ICDC019): 01:22:48 Finding automatic schemes (step 3 of 3).
+INFO (ICDC019): 01:22:48   Finding FIFO schemes (step 1 of 7).
+INFO (ICDC019): 01:22:48   Finding Pulse And Edge schemes (step 2 of 7).
+INFO (ICDC019): 01:22:48     Pulse and Edge schemes detection (step 1 of 2).
+INFO (ICDC019): 01:22:48     Pulse and Edge schemes detection (step 2 of 2).
+INFO (ICDC019): 01:22:48   Finding NDFF with 'allow control neighbor' false and 'allow fanout' false (step 3 of 7).
+INFO (ICDC020): 01:22:48     NDFF schemes detection (50% completed).
+INFO (ICDC020): 01:22:48     NDFF schemes detection (100% completed).
+INFO (ICDC019): 01:22:48   Finding Composite schemes (step 4 of 7).
+INFO (ICDC019): 01:22:48     Finding Handshake schemes (step 1 of 5).
+INFO (ICDC019): 01:22:48     Finding Glitch Protector schemes (step 2 of 5).
+INFO (ICDC019): 01:22:48     Finding Mux schemes (step 3 of 5).
+INFO (ICDC020): 01:22:48       Multiplexer schemes detection (100% completed).
+INFO (ICDC019): 01:22:48     Finding Sync Enabler schemes (step 4 of 5).
+INFO (ICDC019): 01:22:48     Finding Aggressive Control Sync schemes (step 5 of 5).
+INFO (ICDC019): 01:22:48   Finding NDFF with 'allow control neighbor' true and 'allow fanout' true (step 7 of 7).
+INFO (ICDC020): 01:22:48     NDFF schemes detection (20% completed).
+INFO (ICDC020): 01:22:48     NDFF schemes detection (40% completed).
+INFO (ICDC020): 01:22:48     NDFF schemes detection (60% completed).
+INFO (ICDC020): 01:22:48     NDFF schemes detection (80% completed).
+INFO (ICDC020): 01:22:48     NDFF schemes detection (100% completed).
+WARNING (WCDC026): The following schemes could not be added because their parameters include unclocked signals: "u_Handshake_syn.dreq".
+CDC Schemes Found: 1
+1
+[<embedded>] % # Find Convergence
+[<embedded>] % check_cdc -group -find
+INFO (ICDC019): 01:22:48 Finding convergences (step 1 of 3).
+INFO (ICDC019): 01:22:48 Finding glitches (step 1 of 2).
+INFO (ICDC020): 01:22:48   Glitches detection - Build Convergence Map (100% completed).
+CDC Convergences Found: 0
+0
+[<embedded>] % 
+[<embedded>] % ## ------------------ Reset Analysis ------------------ ##
+[<embedded>] % # check_cdc -reset -find
+[<embedded>] % 
+[<embedded>] % ## ---------------- Functional Checks ----------------- ##
+[<embedded>] % check_cdc -protocol_check -generate
+WARNING (WRS035): The declared reset file does not initialize all flops/latches. Use the command "reset -sequence" or reset files that contain internal signals to avoid spurious counterexamples. If your reset file already contains internal signals use the switch "-include_internal" to reset internal flops/latches.
+INFO (IRS021): Reset analysis using cached values. Assigned values for 421 of 421 design flops, 0 of 9034 design latches, 0 of 0 internal elements.
+INFO (IRS039): Reset analysis complete.
+CDC_u_Handshake_syn.clk1_dff.A2_data_stable
+[<embedded>] % check_cdc -protocol_check -prove
+INFO (IPF127): Verbosity level: 6
+INFO (IPF127): Using Proof Grid in local mode, with 1 licenses
+INFO (IPF127): Trace generation: Keeping
+INFO (IPF127): Engine C/G memory limit: 4096MB
+INFO (IPF127): Using rule cdc_functional.
+INFO (IPF127): (cdc_functional_plan) Using action: prove_action.
+INFO (IPF036): Starting proof on task: "<CDC_scheme_properties>", 1 properties to prove with 0 already proven/unreachable
+INFO (IRS026): Computing reset analysis for expressions.
+INFO (IRS027): Finished computing reset analysis for expressions.
+INFO (IPF031): Settings used for proof thread 0:
+    orchestration                 = off
+    time_limit                    = 86399s
+    per_property_time_limit       = 1s * 10 ^ scan
+    engine_mode                   = Hp Ht N B 
+    proofgrid_per_engine_max_jobs = 1
+    max engine jobs               = Hp Ht N B, total 4
+    proofgrid_mode                = local
+    proofgrid_restarts            = 10
+INFO (ICK016): The clocks listed below were automatically declared as "-both_edges" by the tool as the fastest clock had already been declared as "-both_edges", or it is a slow clock that has activity on the negedge.
+    For message help, type "help -message ICK016".
+    clk1 clk2 clk3
+0: Using multistage preprocessing
+0: Starting reduce
+0: Finished reduce in 0.001s
+0.0.PRE: Performing Proof Simplification...
+0.0.Hp: clocks: 4, declared: 4, looping: 0, posedge: 4, negedge: 0, noedge: 0, bothedge: 0
+0.0.Hp: Proof Simplification Iteration 1	[0.00 s]
+0.0.Hp: Proof Simplification Iteration 2	[0.00 s]
+0.0.Hp: Proof Simplification Iteration 3	[0.00 s]
+0.0.Hp: Proof Simplification Iteration 4	[0.00 s]
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property ":noDeadEnd" was proven in 0.00 s.
+    Use check_assumptions -show -dead_end to show this property in the property table.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property ":noConflict" was proven in 0.00 s.
+    Use check_assumptions -show to show this property in the property table.
+INFO (IPF047): 0.0.PRE: The cover property ":live" was covered in 1 cycles in 0.00 s.
+    Use check_assumptions -show -live to show this property in the property table.
+0.0.PRE: Proof Simplification completed in 0.00 s
+0: About to start ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
+0: =============================== ProofGrid start ===============================
+0: ProofGrid usable level: 1
+0: Initial ProofGrid level: 1
+0: ProofGrid is starting event handling
+0.0.Ht: Proofgrid shell started at 111885@ee24(local) jg_111767_ee24_1
+0.0.B: Proofgrid shell started at 111887@ee24(local) jg_111767_ee24_1
+0.0.B: clocks: 4, declared: 4, looping: 0, posedge: 4, negedge: 0, noedge: 0, bothedge: 0
+0.0.B: Last scan. Per property time limit: 0s
+0.0.B: Starting proof for property "CDC_u_Handshake_syn.clk1_dff.A2_data_stable"	[0.00 s].
+0.0.Ht: clocks: 4, declared: 4, looping: 0, posedge: 4, negedge: 0, noedge: 0, bothedge: 0
+0.0.B: Trace Attempt  1	[0.00 s]
+0.0.B: Trace Attempt  2	[0.00 s]
+0.0.B: Trace Attempt  3	[0.00 s]
+0.0.B: Trace Attempt  4	[0.00 s]
+0.0.B: Trace Attempt  5	[0.00 s]
+0.0.Ht: Trace Attempt  1	[0.00 s]
+0.0.Ht: Trace Attempt  2	[0.00 s]
+0.0.Ht: Trace Attempt  3	[0.00 s]
+0.0.Ht: Trace Attempt  4	[0.00 s]
+0.0.Ht: Trace Attempt  5	[0.00 s]
+0.0.N: Proofgrid shell started at 111886@ee24(local) jg_111767_ee24_1
+0.0.N: clocks: 4, declared: 4, looping: 0, posedge: 4, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: Last scan. Per property time limit: 0s
+0.0.N: Starting proof for property "CDC_u_Handshake_syn.clk1_dff.A2_data_stable"	[0.00 s].
+0.0.N: Trace Attempt  1	[0.00 s]
+0.0.N: Trace Attempt  2	[0.00 s]
+0.0.N: Trace Attempt  3	[0.00 s]
+0.0.N: Trace Attempt  3	[0.00 s]
+0.0.N: Requesting engine job to stop
+0.0.B: Requesting engine job to stop
+0.0.Ht: Requesting engine job to terminate
+INFO (IPF144): 0: Initiating shutdown of proof [0.01 s]
+0.0.Ht: Trace Attempt 103	[0.01 s]
+0.0.Ht: A trace with 103 cycles was found. [0.01 s]
+INFO (IPF055): 0.0.Ht: A counterexample (cex) with 103 cycles was found for the property "CDC_u_Handshake_syn.clk1_dff.A2_data_stable" in 0.06 s.
+0.0.Ht: All properties determined. [0.01 s]
+0.0.N: Trace Attempt  4	[0.00 s]
+0.0.N: Stopped processing property "CDC_u_Handshake_syn.clk1_dff.A2_data_stable"	[0.07 s].
+0.0.B: Trace Attempt 103	[0.01 s]
+0.0.B: Stopped processing property "CDC_u_Handshake_syn.clk1_dff.A2_data_stable"	[0.07 s].
+0.0.B: All properties determined. [0.01 s]
+0.0.N: All properties determined. [0.00 s]
+0.0.Ht: Exited with Success (@ 0.01 s)
+0: ProofGrid usable level: 0
+0.0.B: Exited with Success (@ 0.01 s)
+0.0.Hp: Proofgrid shell started at 111884@ee24(local) jg_111767_ee24_1
+0.0.Hp: Requesting engine job to terminate
+0.0.N: Exited with Success (@ 0.02 s)
+0.0.Hp: Preventing job from starting because proof is shutting down.
+0.0.Hp: Requesting engine job to terminate
+0.0.Hp: Interrupted. [0.00 s]
+0.0.Hp: Exited with Success (@ 0.02 s)
+0: --------------------------------------------------------------
+ProofGrid Summary (utilization 6.35 %)
+--------------------------------------------------------------
+     engines started                               :     4
+     engine jobs started                           :     4
+
+    Average time in state (seconds)
+    ------------------------------------------------------
+    Engine  Pending     Running        Dead    Utilization
+    ------------------------------------------------------
+     Hp        0.08        0.00        0.00        0.00 %
+     Ht        0.05        0.01        0.00       11.41 %
+      N        0.06        0.00        0.00        4.30 %
+      B        0.05        0.01        0.00       11.44 %
+    all        0.06        0.00        0.00        6.35 %
+
+    Total time in state (seconds)
+    -----------------------------------------
+            Pending     Running        Dead  
+    -----------------------------------------
+               0.24        0.02        0.00
+
+    Data read    : 21.75 kiB
+    Data written : 4.29 kiB
+
+0: All pending notifications were processed.
+INFO (IPF127): (cdc_functional_plan) Done using action: prove_action.
+INFO (IPF127): (cdc_functional_plan) Final state reached.
+
+==============================================================
+SUMMARY
+==============================================================
+           Properties Considered              : 1
+                 assertions                   : 1
+                  - proven                    : 0 (0%)
+                  - bounded_proven (user)     : 0 (0%)
+                  - bounded_proven (auto)     : 0 (0%)
+                  - marked_proven             : 0 (0%)
+                  - cex                       : 1 (100%)
+                  - ar_cex                    : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 0 (0%)
+                  - error                     : 0 (0%)
+                 covers                       : 0
+                  - unreachable               : 0
+                  - bounded_unreachable (user): 0
+                  - covered                   : 0
+                  - ar_covered                : 0
+                  - undetermined              : 0
+                  - unknown                   : 0
+                  - error                     : 0
+{unprocessed 0} {passed 0} {failed 1} u_Handshake_syn.clk1_dff.A2
+[<embedded>] % 
+[<embedded>] % ## ---------- Proving Signal Configuration ------------ ##
+[<embedded>] % # config_rtlds -signal -prove
+[<embedded>] % 
+[<embedded>] % ## ----------------- Validate Waiver ------------------ ##
+[<embedded>] % check_cdc -waiver -generate
+INFO (IRS026): Computing reset analysis for expressions.
+INFO (IRS027): Finished computing reset analysis for expressions.
+2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+[<embedded>] % check_cdc -waiver -prove
+INFO (IPF127): Verbosity level: 6
+INFO (IPF127): Using Proof Grid in local mode, with 1 licenses
+INFO (IPF127): Trace generation: Keeping
+INFO (IPF127): Engine C/G memory limit: 4096MB
+INFO (IPF127): Using rule conditional_waiver.
+INFO (IPF127): (conditional_waiver) Using action: prove_action.
+INFO (IPF036): Starting proof on task: "<CDC_conditional_waiver_properties>", 18 properties to prove with 0 already proven/unreachable
+INFO (IPF031): Settings used for proof thread 1:
+    orchestration                 = off
+    time_limit                    = 86399s
+    per_property_time_limit       = 1s * 10 ^ scan
+    engine_mode                   = Hp Ht N B 
+    proofgrid_per_engine_max_jobs = 1
+    max engine jobs               = Hp Ht N B, total 4
+    proofgrid_mode                = local
+    proofgrid_restarts            = 10
+1: Using multistage preprocessing
+1: Starting reduce
+1: Finished reduce in 0.025s
+1.0.PRE: Performing Proof Simplification...
+1.0.Hp: clocks: 137, declared: 4, looping: 0, posedge: 4, negedge: 0, noedge: 133, bothedge: 0
+1.0.Hp: Clocks that will never have a posedge: rst_n [vTrue], a1299, a1724, a2148, a2168, ~a1773, ~a1776, ~a1783, ~a1785, ~a1792, ~a1794, ~a1801, ~a1803, ~a1809, ~a1811, ~a1817, ~a1819, ~a1825, ~a1827, ~a1833, ~a1835, ~a1840, ~a1842, ~a1847, ~a1849, ~a1854, ~a1856, ~a1861, ~a1863, ~a1868, ~a1870, ~a1875, ~a1877, ~a1882, ~a1884, ~a1889, ~a1891, ~a1895, ~a1897, ~a1901, ~a1903, ~a1907, ~a1909, ~a1913, ~a1915, ~a1919, ~a1921, ~a1925, ~a1927, ~a1931, ~a1933, ~a1937, ~a1939, ~a1943, ~a1945, ~a1949, ~a1951, ~a1955, ~a1957, ~a1961, ~a1963, ~a1967, ~a1969, ~a1973, ~a1975, ~a1979, ~a1981, ~a1985, ~a1987, ~a1990, ~a1992, ~a1995, ~a1997, ~a2000, ~a2002, ~a2005, ~a2007, ~a2010, ~a2012, ~a2015, ~a2017, ~a2020, ~a2022, ~a2025, ~a2027, ~a2030, ~a2032, ~a2035, ~a2037, ~a2040, ~a2042, ~a2045, ~a2047, ~a2050, ~a2052, ~a2055, ~a2057, ~a2060, ~a2062, ~a2065, ~a2067, ~a2070, ~a2072, ~a2075, ~a2077, ~a2080, ~a2082, ~a2085, ~a2087, ~a2090, ~a2092, ~a2095, ~a2097, ~a2100, ~a2102, ~a2105, ~a2107, ~a2110, ~a2112, ~a2115, ~a2117, ~a2120, ~a2122, ~a2125, ~a2127, ~a2130, ~a2132, ~a2135, ~a2137, ~a2140, ~a2142, ~a2145, ~a2147, 
+1.0.Hp: Proof Simplification Iteration 1	[0.00 s]
+1.0.Hp: Proof Simplification Iteration 2	[0.02 s]
+1.0.Hp: Proof Simplification Iteration 3	[0.04 s]
+1.0.Hp: Proof Simplification Iteration 4	[0.06 s]
+1.0.Hp: Proof Simplification Iteration 5	[0.07 s]
+1.0.PRE: Proof Simplification completed in 0.16 s
+1: About to start ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
+1: =============================== ProofGrid start ===============================
+1: ProofGrid usable level: 18
+1: Initial ProofGrid level: 1
+1: ProofGrid is starting event handling
+1.0.Hp: Proofgrid shell started at 111964@ee24(local) jg_111767_ee24_2
+1.0.B: Proofgrid shell started at 111967@ee24(local) jg_111767_ee24_2
+1.0.N: Proofgrid shell started at 111966@ee24(local) jg_111767_ee24_2
+1.0.Ht: Proofgrid shell started at 111965@ee24(local) jg_111767_ee24_2
+1.0.Hp: clocks: 4, declared: 4, looping: 0, posedge: 4, negedge: 0, noedge: 0, bothedge: 0
+1.0.B: clocks: 4, declared: 4, looping: 0, posedge: 4, negedge: 0, noedge: 0, bothedge: 0
+1.0.N: clocks: 4, declared: 4, looping: 0, posedge: 4, negedge: 0, noedge: 0, bothedge: 0
+1.0.Ht: clocks: 4, declared: 4, looping: 0, posedge: 4, negedge: 0, noedge: 0, bothedge: 0
+1.0.N: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_10"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.N: Trace Attempt  2	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.B: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_10"	[0.00 s].
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.01 s]
+1.0.B: Trace Attempt  3	[0.01 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.08 s]
+1.0.N: Trace Attempt  2	[0.08 s]
+1.0.N: Trace Attempt  3	[0.08 s]
+1.0.Hp: Trace Attempt  1	[0.12 s]
+1.0.Ht: Trace Attempt  1	[0.11 s]
+1.0.Ht: Trace Attempt  2	[0.11 s]
+1.0.Ht: Trace Attempt  3	[0.12 s]
+1.0.Ht: Trace Attempt  4	[0.13 s]
+1.0.Ht: Trace Attempt  5	[0.14 s]
+1.0.B: Trace Attempt 71	[0.08 s]
+1.0.B: A trace with 71 cycles was found. [0.08 s]
+INFO (IPF055): 1.0.B: A counterexample (cex) with 71 cycles was found for the property "CDC_p_datapath_meta_safe_10" in 0.26 s.
+1.0.Ht: Trace Attempt  7	[0.15 s]
+1.0.Ht: A trace with 7 cycles was found. [0.15 s]
+INFO (IPF055): 1.0.Ht: A counterexample (cex) with 7 cycles was found for the property "CDC_p_datapath_meta_safe_13" in 0.37 s.
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_10"	[0.40 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_11"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.00 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt 26	[0.16 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_10"	[0.40 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_11"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.N: Trace Attempt  2	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.Ht: A trace with 7 cycles was found. [0.17 s]
+INFO (IPF055): 1.0.Ht: A counterexample (cex) with 7 cycles was found for the property "CDC_p_datapath_meta_safe_21" in 0.43 s.
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.Ht: A trace with 7 cycles was found. [0.18 s]
+INFO (IPF055): 1.0.Ht: A counterexample (cex) with 7 cycles was found for the property "CDC_p_datapath_meta_safe_25" in 0.49 s.
+1.0.N: Trace Attempt  1	[0.03 s]
+1.0.N: Trace Attempt  2	[0.04 s]
+1.0.N: Trace Attempt  3	[0.04 s]
+1.0.N: Trace Attempt  5	[0.04 s]
+1.0.Ht: Trace Attempt  8	[0.22 s]
+1.0.N: Trace Attempt  1	[0.12 s]
+1.0.N: Trace Attempt  2	[0.12 s]
+1.0.N: Trace Attempt  3	[0.12 s]
+1.0.N: Trace Attempt  5	[0.12 s]
+1.0.B: Trace Attempt 91	[0.10 s]
+1.0.B: A trace with 91 cycles was found. [0.10 s]
+INFO (IPF055): 1.0.B: A counterexample (cex) with 91 cycles was found for the property "CDC_p_datapath_meta_safe_11" in 0.19 s.
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_11"	[0.22 s].
+1.0.N: Trace Attempt 22	[0.16 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_11"	[0.22 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_18"	[0.00 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_18"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  2	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.B: Trace Attempt 21	[0.02 s]
+1.0.B: A trace with 21 cycles was found. [0.02 s]
+INFO (IPF055): 1.0.B: A counterexample (cex) with 21 cycles was found for the property "CDC_p_datapath_meta_safe_18" in 0.03 s.
+1.0.N: Trace Attempt 13	[0.04 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_18"	[0.06 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_20"	[0.00 s].
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_18"	[0.06 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_20"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.00 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1: ProofGrid is temporarily paused because there are too many pending traces.
+1: ProofGrid is resuming to work after pausing for 0s. The amount of pending traces decreased.
+1.0.B: Trace Attempt 21	[0.01 s]
+1.0.B: A trace with 21 cycles was found. [0.02 s]
+INFO (IPF055): 1.0.B: A counterexample (cex) with 21 cycles was found for the property "CDC_p_datapath_meta_safe_20" in 0.03 s.
+1.0.N: Trace Attempt 13	[0.03 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_20"	[0.06 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_12"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.N: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  3	[0.00 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_20"	[0.06 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_12"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.00 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1: ProofGrid is temporarily paused because there are too many pending traces.
+1: ProofGrid is resuming to work after pausing for 0s. The amount of pending traces decreased.
+1.0.Ht: Trace Attempt 21	[0.41 s]
+1.0.Ht: A trace with 21 cycles was found. [0.44 s]
+INFO (IPF055): 1.0.Ht: A counterexample (cex) with 21 cycles was found for the property "CDC_p_datapath_meta_safe_12" in 0.80 s.
+1.0.N: Trace Attempt 14	[0.05 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_12"	[0.09 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_14"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.N: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  3	[0.00 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.B: Trace Attempt 21	[0.01 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_12"	[0.09 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_14"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.07 s]
+1.0.N: Trace Attempt  2	[0.07 s]
+1.0.N: Trace Attempt  3	[0.07 s]
+1.0.N: Trace Attempt  5	[0.08 s]
+1.0.N: Trace Attempt  1	[0.34 s]
+1.0.N: Trace Attempt  2	[0.34 s]
+1.0.N: Trace Attempt  3	[0.34 s]
+1.0.N: Trace Attempt  5	[0.34 s]
+1: ProofGrid usable level: 10
+1.0.Ht: Trace Attempt 22	[1.12 s]
+1.0.Ht: Trace Attempt 25	[1.17 s]
+1.0.Ht: A trace with 25 cycles was found. [1.37 s]
+INFO (IPF055): 1.0.Ht: A counterexample (cex) with 25 cycles was found for the property "CDC_p_datapath_meta_safe_16" in 1.46 s.
+1.0.Ht: Trace Attempt 26	[1.41 s]
+1.0.N: Trace Attempt 60	[1.01 s]
+1.0.N: Per property time limit expired (1.00 s) [1.01 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_14"	[0.65 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_15"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.N: Trace Attempt  2	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.B: Trace Attempt 263	[0.99 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_14"	[0.65 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_15"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.03 s]
+1.0.N: Trace Attempt  2	[0.03 s]
+1.0.N: Trace Attempt  3	[0.03 s]
+1.0.N: Trace Attempt  5	[0.04 s]
+1.0.B: Trace Attempt 41	[0.04 s]
+1.0.B: A trace with 41 cycles was found. [0.04 s]
+INFO (IPF055): 1.0.B: A counterexample (cex) with 41 cycles was found for the property "CDC_p_datapath_meta_safe_15" in 0.13 s.
+1.0.N: Trace Attempt 19	[0.08 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_15"	[0.16 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_17"	[0.00 s].
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_15"	[0.16 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_17"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.N: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.00 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.04 s]
+1.0.N: Trace Attempt  2	[0.04 s]
+1.0.N: Trace Attempt  3	[0.04 s]
+1.0.N: Trace Attempt  5	[0.04 s]
+1.0.B: Trace Attempt 85	[0.08 s]
+1.0.B: A trace with 85 cycles was found. [0.09 s]
+INFO (IPF055): 1.0.B: A counterexample (cex) with 85 cycles was found for the property "CDC_p_datapath_meta_safe_17" in 0.14 s.
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_17"	[0.18 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_22"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt 25	[0.14 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_17"	[0.18 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_22"	[0.00 s].
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.N: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  3	[0.00 s]
+1.0.N: Trace Attempt  4	[0.00 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.03 s]
+1.0.N: Trace Attempt  2	[0.03 s]
+1.0.N: Trace Attempt  3	[0.03 s]
+1.0.N: Trace Attempt  5	[0.03 s]
+1.0.B: Trace Attempt 41	[0.04 s]
+1.0.B: A trace with 41 cycles was found. [0.04 s]
+INFO (IPF055): 1.0.B: A counterexample (cex) with 41 cycles was found for the property "CDC_p_datapath_meta_safe_22" in 0.05 s.
+1.0.N: Trace Attempt 17	[0.07 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_22"	[0.08 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_23"	[0.00 s].
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_22"	[0.08 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_23"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.01 s]
+1.0.N: Trace Attempt  2	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  3	[0.04 s]
+1.0.B: Trace Attempt  1	[0.04 s]
+1.0.N: Trace Attempt  4	[0.06 s]
+1.0.N: Trace Attempt  5	[0.06 s]
+1: ProofGrid usable level: 6
+1.0.N: Trace Attempt  5	[0.12 s]
+1.0.B: Trace Attempt  2	[0.32 s]
+1.0.B: Trace Attempt  3	[0.51 s]
+1.0.B: Trace Attempt  4	[0.71 s]
+1.0.B: Trace Attempt  5	[0.90 s]
+1.0.N: Trace Attempt  1	[0.95 s]
+1.0.N: Trace Attempt  2	[0.95 s]
+1.0.N: Trace Attempt  3	[0.95 s]
+1.0.N: Trace Attempt  5	[0.96 s]
+1.0.N: Trace Attempt 15	[0.99 s]
+1.0.N: Per property time limit expired (1.00 s) [1.00 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_23"	[0.88 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_24"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.01 s]
+1.0.N: Trace Attempt  2	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.07 s]
+1.0.N: Trace Attempt  2	[0.07 s]
+1.0.N: Trace Attempt  3	[0.07 s]
+1.0.N: Trace Attempt  4	[0.07 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_23"	[0.99 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_24"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.B: Trace Attempt  3	[0.01 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt 42	[1.01 s]
+1.0.N: Per property time limit expired (1.00 s) [1.01 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_24"	[1.01 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_26"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.N: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  3	[0.00 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.B: Trace Attempt 244	[0.89 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_24"	[0.92 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_26"	[0.00 s].
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.01 s]
+1.0.B: Trace Attempt  3	[0.01 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.09 s]
+1.0.N: Trace Attempt  2	[0.09 s]
+1.0.N: Trace Attempt  3	[0.10 s]
+1.0.N: Trace Attempt  5	[0.10 s]
+1.0.N: Trace Attempt 39	[0.90 s]
+1.0.N: Per property time limit expired (1.00 s) [1.00 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_26"	[1.00 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_27"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.N: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  3	[0.00 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.B: Trace Attempt 258	[0.98 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_26"	[1.01 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_27"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.01 s]
+1.0.B: Trace Attempt  3	[0.01 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.04 s]
+1.0.N: Trace Attempt  2	[0.04 s]
+1.0.N: Trace Attempt  3	[0.04 s]
+1.0.N: Trace Attempt  5	[0.04 s]
+1.0.N: Trace Attempt  1	[0.12 s]
+1.0.N: Trace Attempt  2	[0.12 s]
+1.0.N: Trace Attempt  3	[0.12 s]
+1.0.N: Trace Attempt  5	[0.13 s]
+1.0.B: Trace Attempt 85	[0.09 s]
+1.0.B: A trace with 85 cycles was found. [0.09 s]
+INFO (IPF055): 1.0.B: A counterexample (cex) with 85 cycles was found for the property "CDC_p_datapath_meta_safe_27" in 0.24 s.
+1.0.N: Trace Attempt 18	[0.17 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_27"	[0.29 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_28"	[0.00 s].
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_27"	[0.28 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_28"	[0.00 s].
+1.0.N: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  2	[0.00 s]
+1.0.N: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.00 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  3	[0.01 s]
+1.0.N: Trace Attempt  4	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.09 s]
+1.0.N: Trace Attempt  2	[0.10 s]
+1.0.N: Trace Attempt  3	[0.10 s]
+1.0.N: Trace Attempt  5	[0.10 s]
+1.0.Ht: Trace Attempt 94	[5.44 s]
+1: ProofGrid usable level: 5
+1.0.N: Trace Attempt 37	[1.00 s]
+1.0.N: Per property time limit expired (1.00 s) [1.00 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_28"	[0.89 s].
+1.0.N: Next scan (1) will use per property time limit: 1s * 10 ^ 1 = 10s
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_14"	[0.00 s].
+1.0.B: Trace Attempt 258	[1.00 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_28"	[0.90 s].
+1.0.B: Next scan (1) will use per property time limit: 1s * 10 ^ 1 = 10s
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_14"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.01 s]
+1.0.B: Trace Attempt  2	[0.01 s]
+1.0.B: Trace Attempt  3	[0.01 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt 59	[0.06 s]
+1.0.N: Trace Attempt  1	[0.26 s]
+1.0.N: Trace Attempt  2	[0.27 s]
+1.0.N: Trace Attempt  3	[0.27 s]
+1.0.N: Trace Attempt  5	[0.27 s]
+1.0.N: Trace Attempt  1	[2.04 s]
+1.0.N: Trace Attempt  2	[2.04 s]
+1.0.N: Trace Attempt  3	[2.04 s]
+1.0.N: Trace Attempt  5	[2.04 s]
+1.0.B: Trace Attempt 524	[4.02 s]
+1.0.N: Trace Attempt  1	[4.92 s]
+1.0.N: Trace Attempt  2	[4.92 s]
+1.0.N: Trace Attempt  3	[4.93 s]
+1.0.N: Trace Attempt  5	[4.93 s]
+1.0.Ht: Trace Attempt 162	[11.61 s]
+1.0.B: Trace Attempt 736	[8.03 s]
+1.0.N: Trace Attempt 138	[8.93 s]
+1.0.Ht: Trace Attempt 242	[15.76 s]
+1.0.N: Trace Attempt 168	[9.99 s]
+1.0.N: Per property time limit expired (10.00 s) [10.01 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_14"	[10.01 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_23"	[0.00 s].
+1.0.B: Trace Attempt 821	[9.98 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_14"	[10.06 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_23"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.03 s]
+1.0.B: Trace Attempt  2	[0.21 s]
+1.0.N: Trace Attempt 21	[0.27 s]
+1.0.N: Trace Attempt  1	[0.41 s]
+1.0.N: Trace Attempt  2	[0.41 s]
+1.0.N: Trace Attempt  3	[0.41 s]
+1.0.N: Trace Attempt  5	[0.42 s]
+1.0.B: Trace Attempt  3	[0.40 s]
+1.0.B: Trace Attempt  4	[0.58 s]
+1.0.B: Trace Attempt  5	[0.78 s]
+1.0.N: Trace Attempt  1	[3.43 s]
+1.0.N: Trace Attempt  2	[3.43 s]
+1.0.N: Trace Attempt  3	[3.43 s]
+1.0.N: Trace Attempt  5	[3.44 s]
+1.0.Ht: Trace Attempt 282	[20.49 s]
+1.0.B: Trace Attempt 22	[4.99 s]
+1.0.N: Trace Attempt 60	[7.53 s]
+1.0.N: Trace Attempt  1	[9.02 s]
+1.0.N: Trace Attempt  2	[9.03 s]
+1.0.N: Trace Attempt  3	[9.03 s]
+1.0.N: Trace Attempt  5	[9.04 s]
+1.0.B: Trace Attempt 35	[9.18 s]
+1.0.Ht: Trace Attempt 322	[25.89 s]
+1.0.N: Trace Attempt 33	[9.98 s]
+1.0.N: Per property time limit expired (10.00 s) [10.00 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_23"	[10.00 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_24"	[0.00 s].
+1.0.N: Trace Attempt 41	[0.04 s]
+1.0.N: Trace Attempt  1	[0.10 s]
+1.0.N: Trace Attempt  2	[0.11 s]
+1.0.N: Trace Attempt  3	[0.11 s]
+1.0.N: Trace Attempt  4	[0.11 s]
+1.0.B: Trace Attempt 37	[9.85 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_23"	[10.13 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_24"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[2.56 s]
+1.0.N: Trace Attempt  2	[2.56 s]
+1.0.N: Trace Attempt  3	[2.56 s]
+1.0.N: Trace Attempt  4	[2.57 s]
+1.0.Ht: Trace Attempt 356	[29.91 s]
+1.0.B: Trace Attempt 501	[4.01 s]
+1.0.N: Trace Attempt 77	[6.62 s]
+1.0.N: Trace Attempt  1	[6.95 s]
+1.0.N: Trace Attempt  2	[6.95 s]
+1.0.N: Trace Attempt  3	[6.95 s]
+1.0.N: Trace Attempt  4	[6.96 s]
+1.0.B: Trace Attempt 682	[8.01 s]
+1.0.N: Trace Attempt 81	[9.90 s]
+1.0.N: Per property time limit expired (10.00 s) [10.01 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_24"	[10.01 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_26"	[0.00 s].
+1.0.N: Trace Attempt 39	[0.04 s]
+1.0.B: Trace Attempt 743	[9.79 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_24"	[9.87 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_26"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.B: Trace Attempt  3	[0.00 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[0.21 s]
+1.0.N: Trace Attempt  2	[0.21 s]
+1.0.N: Trace Attempt  3	[0.21 s]
+1.0.N: Trace Attempt  5	[0.21 s]
+1.0.N: Trace Attempt  1	[2.90 s]
+1.0.N: Trace Attempt  2	[2.90 s]
+1.0.N: Trace Attempt  3	[2.90 s]
+1.0.N: Trace Attempt  5	[2.90 s]
+1.0.B: Trace Attempt 518	[4.01 s]
+1.0.Hp: A proof was found: No trace exists. [42.22 s]
+INFO (IPF057): 1.0.Hp: The property "CDC_p_datapath_meta_safe_24" was proven in 42.20 s.
+1: ProofGrid usable level: 4
+1.0.N: Trace Attempt  1	[6.85 s]
+1.0.N: Trace Attempt  2	[6.85 s]
+1.0.N: Trace Attempt  3	[6.86 s]
+1.0.N: Trace Attempt  5	[6.86 s]
+1.0.B: Trace Attempt 735	[8.03 s]
+1.0.N: Trace Attempt 89	[9.95 s]
+1.0.N: Per property time limit expired (10.00 s) [10.01 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_26"	[10.01 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_28"	[0.00 s].
+1.0.N: Trace Attempt 21	[0.02 s]
+1.0.N: Trace Attempt  1	[0.04 s]
+1.0.N: Trace Attempt  2	[0.05 s]
+1.0.N: Trace Attempt  3	[0.05 s]
+1.0.N: Trace Attempt  5	[0.05 s]
+1.0.B: Trace Attempt 810	[9.93 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_26"	[10.09 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_28"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.01 s]
+1.0.B: Trace Attempt  2	[0.01 s]
+1.0.B: Trace Attempt  3	[0.01 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt  1	[1.60 s]
+1.0.N: Trace Attempt  2	[1.61 s]
+1.0.N: Trace Attempt  3	[1.61 s]
+1.0.N: Trace Attempt  5	[1.61 s]
+1.0.B: Trace Attempt 516	[4.01 s]
+1.0.N: Trace Attempt  1	[4.53 s]
+1.0.N: Trace Attempt  2	[4.53 s]
+1.0.N: Trace Attempt  3	[4.53 s]
+1.0.N: Trace Attempt  5	[4.53 s]
+1.0.B: Trace Attempt 725	[8.03 s]
+1.0.N: Trace Attempt 76	[8.79 s]
+1.0.N: Trace Attempt  1	[9.59 s]
+1.0.N: Trace Attempt  2	[9.60 s]
+1.0.N: Trace Attempt  3	[9.60 s]
+1.0.N: Trace Attempt  5	[9.60 s]
+1.0.N: Trace Attempt 21	[9.74 s]
+1.0.N: Per property time limit expired (10.00 s) [10.00 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_28"	[10.00 s].
+1.0.N: Next scan (2) will use per property time limit: 1s * 10 ^ 2 = 100s
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_14"	[0.00 s].
+1.0.B: Trace Attempt 802	[9.85 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_28"	[9.92 s].
+1.0.B: Next scan (2) will use per property time limit: 1s * 10 ^ 2 = 100s
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_14"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.B: Trace Attempt  3	[0.01 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.N: Trace Attempt 101	[0.10 s]
+1.0.N: Trace Attempt  1	[0.26 s]
+1.0.N: Trace Attempt  2	[0.26 s]
+1.0.N: Trace Attempt  3	[0.26 s]
+1.0.N: Trace Attempt  5	[0.26 s]
+1.0.B: Trace Attempt 518	[4.01 s]
+1.0.N: Trace Attempt 129	[4.34 s]
+1.0.B: Trace Attempt 731	[8.03 s]
+1.0.N: Trace Attempt 215	[8.43 s]
+1.0.B: Trace Attempt 894	[12.05 s]
+1.0.N: Trace Attempt 270	[12.48 s]
+1.0.N: Validation of fixpoint was successful. Time = 0.01
+1.0.N: Trace Attempt 277	[12.91 s]
+1.0.N: A proof was found: No trace exists. [12.96 s]
+INFO (IPF057): 1.0.N: The property "CDC_p_datapath_meta_safe_14" was proven in 12.96 s.
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_14"	[12.96 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_23"	[0.00 s].
+1.0.B: Trace Attempt 924	[12.90 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_14"	[12.97 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_23"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.03 s]
+1.0.B: Trace Attempt  2	[0.22 s]
+1.0.B: Trace Attempt  3	[0.40 s]
+1: ProofGrid usable level: 3
+1.0.B: Trace Attempt  4	[0.58 s]
+1.0.B: Trace Attempt  5	[0.77 s]
+1.0.N: Trace Attempt 61	[1.03 s]
+1.0.N: Trace Attempt  1	[1.59 s]
+1.0.N: Trace Attempt  2	[1.59 s]
+1.0.N: Trace Attempt  3	[1.59 s]
+1.0.N: Trace Attempt  5	[1.60 s]
+1.0.B: Trace Attempt 21	[4.85 s]
+1.0.N: Trace Attempt 74	[5.66 s]
+1.0.B: Trace Attempt 34	[9.04 s]
+1.0.N: Trace Attempt 81	[10.13 s]
+1.0.N: Trace Attempt  1	[10.84 s]
+1.0.N: Trace Attempt  2	[10.84 s]
+1.0.N: Trace Attempt  3	[10.85 s]
+1.0.N: Trace Attempt  5	[10.85 s]
+1.0.B: Trace Attempt 45	[13.23 s]
+1.0.N: Trace Attempt 84	[14.87 s]
+1.0.B: Trace Attempt 55	[17.39 s]
+1.0.N: Trace Attempt 96	[19.00 s]
+1.0.B: Trace Attempt 64	[21.53 s]
+1.0.N: Trace Attempt 103	[23.01 s]
+1.0.N: Trace Attempt  1	[23.02 s]
+1.0.N: Trace Attempt  2	[23.02 s]
+1.0.N: Trace Attempt  3	[23.02 s]
+1.0.N: Trace Attempt  5	[23.03 s]
+1.0.B: Trace Attempt 71	[26.49 s]
+1.0.N: Trace Attempt 84	[27.08 s]
+1.0.B: Trace Attempt 77	[30.89 s]
+1.0.N: Trace Attempt 113	[31.16 s]
+1.0.B: Trace Attempt 83	[35.15 s]
+1.0.N: Trace Attempt 127	[35.85 s]
+1.0.B: Trace Attempt 89	[39.58 s]
+1.0.N: Trace Attempt 135	[40.24 s]
+1.0.B: Trace Attempt 94	[43.86 s]
+1.0.N: Trace Attempt 144	[44.30 s]
+1.0.B: Trace Attempt 99	[47.99 s]
+1.0.N: Trace Attempt 150	[48.31 s]
+1.0.B: Trace Attempt 105	[52.66 s]
+1.0.N: Trace Attempt 156	[53.26 s]
+1.0.B: Trace Attempt 111	[57.09 s]
+1.0.N: Trace Attempt 160	[57.32 s]
+1.0.B: Trace Attempt 115	[61.13 s]
+1.0.N: Trace Attempt 166	[62.00 s]
+1.0.B: Trace Attempt 120	[65.87 s]
+1.0.N: Trace Attempt 171	[66.56 s]
+1.0.B: Trace Attempt 124	[70.28 s]
+1.0.N: Trace Attempt 174	[70.65 s]
+1.0.B: Trace Attempt 130	[74.56 s]
+1.0.N: Trace Attempt 178	[75.37 s]
+1.0.B: Trace Attempt 135	[78.61 s]
+1.0.N: Trace Attempt 182	[79.66 s]
+1.0.Ht: Trace Attempt 362	[149.58 s]
+1.0.B: Trace Attempt 141	[83.55 s]
+1.0.N: Trace Attempt 184	[84.32 s]
+1.0.Ht: Trace Attempt 401	[153.93 s]
+1.0.B: Trace Attempt 147	[88.27 s]
+1.0.N: Trace Attempt 189	[88.51 s]
+1.0.Ht: Trace Attempt 421	[158.41 s]
+1.0.B: Trace Attempt 152	[92.70 s]
+1.0.Ht: Trace Attempt 440	[162.43 s]
+1.0.N: Trace Attempt 193	[93.46 s]
+1.0.B: Trace Attempt 157	[96.72 s]
+1.0.N: Trace Attempt 197	[98.09 s]
+1.0.Ht: Trace Attempt 462	[167.43 s]
+1.0.N: Trace Attempt 200	[99.78 s]
+1.0.N: Per property time limit expired (100.00 s) [100.05 s]
+1.0.N: Stopped processing property "CDC_p_datapath_meta_safe_23"	[100.05 s].
+1.0.N: Starting proof for property "CDC_p_datapath_meta_safe_26"	[0.00 s].
+1.0.N: Trace Attempt 81	[0.11 s]
+1.0.N: Trace Attempt  1	[0.27 s]
+1.0.N: Trace Attempt  2	[0.28 s]
+1.0.N: Trace Attempt  3	[0.28 s]
+1.0.N: Trace Attempt  5	[0.28 s]
+1.0.B: Trace Attempt 160	[99.26 s]
+1.0.B: Stopped processing property "CDC_p_datapath_meta_safe_23"	[100.77 s].
+1.0.B: Starting proof for property "CDC_p_datapath_meta_safe_26"	[0.00 s].
+1.0.B: Trace Attempt  1	[0.00 s]
+1.0.B: Trace Attempt  2	[0.00 s]
+1.0.B: Trace Attempt  3	[0.01 s]
+1.0.B: Trace Attempt  4	[0.01 s]
+1.0.B: Trace Attempt  5	[0.01 s]
+1.0.Ht: Trace Attempt 482	[171.63 s]
+1.0.N: Trace Attempt 90	[4.34 s]
+1.0.N: Trace Attempt  1	[4.36 s]
+1.0.N: Trace Attempt  2	[4.36 s]
+1.0.N: Trace Attempt  3	[4.36 s]
+1.0.N: Trace Attempt  5	[4.37 s]
+1.0.B: Trace Attempt 517	[4.01 s]
+1.0.N: Trace Attempt 91	[8.43 s]
+1.0.N: Trace Attempt  1	[8.44 s]
+1.0.N: Trace Attempt  2	[8.45 s]
+1.0.N: Trace Attempt  3	[8.45 s]
+1.0.N: Trace Attempt  5	[8.45 s]
+1.0.B: Trace Attempt 732	[8.03 s]
+1.0.N: Trace Attempt 92	[12.51 s]
+1.0.B: Trace Attempt 900	[12.03 s]
+1.0.N: Trace Attempt  1	[12.86 s]
+1.0.N: Trace Attempt  2	[12.87 s]
+1.0.N: Trace Attempt  3	[12.87 s]
+1.0.N: Trace Attempt  5	[12.87 s]
+1.0.B: Trace Attempt 1040	[16.06 s]
+1.0.N: Trace Attempt 82	[16.95 s]
+1.0.B: Trace Attempt 1162	[20.09 s]
+1.0.N: Trace Attempt 106	[21.49 s]
+1.0.B: Trace Attempt 1256	[24.13 s]
+1.0.N: Trace Attempt 116	[25.53 s]
+1.0.B: Trace Attempt 1343	[28.14 s]
+1.0.N: Trace Attempt 123	[30.82 s]
+1.0.N: Trace Attempt  1	[31.05 s]
+1.0.N: Trace Attempt  2	[31.06 s]
+1.0.N: Trace Attempt  3	[31.06 s]
+1.0.N: Trace Attempt  5	[31.06 s]
+1.0.B: Trace Attempt 1426	[32.19 s]
+1.0.N: Trace Attempt 90	[35.16 s]
+1.0.B: Trace Attempt 1504	[36.24 s]
+1.0.N: Trace Attempt 108	[39.87 s]
+1.0.B: Trace Attempt 1575	[40.31 s]
+1.0.N: Trace Attempt 119	[44.56 s]
+1.0.B: Trace Attempt 1636	[44.31 s]
+1.0.N: Trace Attempt 128	[48.66 s]
+1.0.B: Trace Attempt 1698	[48.32 s]
+1.0.N: Trace Attempt  1	[49.61 s]
+1.0.N: Trace Attempt  2	[49.62 s]
+1.0.N: Trace Attempt  3	[49.62 s]
+1.0.N: Trace Attempt  5	[49.62 s]
+1.0.B: Trace Attempt 1756	[52.34 s]
+1.0.N: Trace Attempt 90	[53.70 s]
+1.0.B: Trace Attempt 1812	[56.36 s]
+1.0.N: Trace Attempt 108	[58.42 s]
+1.0.B: Trace Attempt 1863	[60.42 s]
+1.0.N: Trace Attempt 119	[63.05 s]
+1.0.B: Trace Attempt 1914	[64.42 s]
+1.0.N: Trace Attempt 129	[67.28 s]
+1.0.N: Trace Attempt  1	[67.97 s]
+1.0.N: Trace Attempt  2	[67.97 s]
+1.0.N: Trace Attempt  3	[67.97 s]
+1.0.N: Trace Attempt  5	[67.97 s]
+1.0.B: Trace Attempt 1966	[68.45 s]
+1.0.N: Trace Attempt 90	[72.04 s]
+1.0.B: Trace Attempt 2012	[72.55 s]
+1.0.N: Trace Attempt 108	[76.61 s]
+1.0.B: Trace Attempt 2059	[76.60 s]
+1.0.N: Trace Attempt 119	[80.88 s]
+1.0.B: Trace Attempt 2102	[80.64 s]
+1.0.Ht: Trace Attempt 502	[250.94 s]
+1.0.N: Trace Attempt 131	[85.23 s]
+1.0.B: Trace Attempt 2150	[84.69 s]
+1.0.N: Trace Attempt  1	[85.90 s]
+1.0.N: Trace Attempt  2	[85.91 s]
+1.0.N: Trace Attempt  3	[85.91 s]
+1.0.N: Trace Attempt  5	[85.91 s]
+1.0.Ht: Trace Attempt 522	[256.50 s]

@@ -15,7 +15,7 @@ matrices) at the beginning of each pattern in raster's code.
 
  Output is also given in raster scan order with serial out format.
  
- In this lab, how to generate memory is thaught. The number of words and the bits
+ In this lab, how to generate memory is taught. The number of words and the bits
 per each word is defined by myself for the design.
 Memory usage can be checked it at CAD.area in 02_SYN/Report/ folder.
 

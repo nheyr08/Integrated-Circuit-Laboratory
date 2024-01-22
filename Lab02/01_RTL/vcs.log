@@ -1,0 +1,1455 @@
+Command: vcs -timescale=1ns/1fs -j4 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v -f filelist.f -o simv -l \
+vcs.log -P /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/novas.tab /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a \
++define+RTL +notimingchecks
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Thu Oct 26 02:05:06 2023
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'TESTBED.v'
+Parsing included file 'PATTERN.v'.
+Back to file 'TESTBED.v'.
+Parsing included file 'CC.v'.
+Back to file 'TESTBED.v'.
+Top Level Modules:
+       TESTBED
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+1 module and 0 UDP read.
+recompiling module TESTBED
+make[1]: Entering directory `/RAID2/COURSE/iclab/iclab129/Lab02/Exercise/01_RTL/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic   -o .//../simv.daidir//_cuarc0.so objs/amcQw_d.o 
+rm -f _cuarc0.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2022.06/linux64/lib -L/usr/cad/synopsys/vcs/2022.06/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1     _99659_archive_1.so _99688_archive_1.so \
+_prev_archive_1.so _cuarc0.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o \
+rmar_llvm_0_1.o rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs \
+/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a    -lvcsnew -lsimprofile \
+-luclinative /usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_save_restore_new.o \
+/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/pli.a -ldl -lm  -lc -lpthread \
+-ldl 
+../simv up to date
+make[1]: Leaving directory `/RAID2/COURSE/iclab/iclab129/Lab02/Exercise/01_RTL/csrc' \
+
+Command: /RAID2/COURSE/iclab/iclab129/Lab02/Exercise/01_RTL/./simv +v2k +libext+.v -a vcs.log +define+RTL +notimingchecks
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Oct 26 02:05 2023
+*Verdi* Loading libsscore_vcs201906.so
+FSDB Dumper for VCS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+***********************************************************************
+*  ERROR -                                                            *
+*  The simulator version is newer than the FSDB dumper version which  *
+*  may cause abnormal behavior, please contact Synopsys support for   *
+*  assistance.                                                        *
+***********************************************************************
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'CC.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+------------------------------------------------------------------------------------------------------------------------------------------
+                                                    START TRAPEZOID RENDERING!                                                            
+------------------------------------------------------------------------------------------------------------------------------------------
+xi  2
+xi  9
+xi  0
+xi 16
+xi  x
+[0;34mPASS PATTERN NO.   0,[m [0;32mexecution cycle :   1[m
+xi126
+xi127
+xi128
+xi129
+xi  x
+[0;34mPASS PATTERN NO.   1,[m [0;32mexecution cycle :   1[m
+xi128
+xi129
+xi126
+xi127
+xi  x
+[0;34mPASS PATTERN NO.   2,[m [0;32mexecution cycle :   1[m
+xi129
+xi127
+xi128
+xi126
+xi  x
+[0;34mPASS PATTERN NO.   3,[m [0;32mexecution cycle :   1[m
+xi128
+xi126
+xi129
+xi127
+xi  x
+[0;34mPASS PATTERN NO.   4,[m [0;32mexecution cycle :   1[m
+xi129
+xi130
+xi128
+xi129
+xi  x
+[0;34mPASS PATTERN NO.   5,[m [0;32mexecution cycle :   1[m
+xi128
+xi129
+xi130
+xi  x
+[0;34mPASS PATTERN NO.   6,[m [0;32mexecution cycle :   1[m
+xi  0
+xi100
+xi  0
+xi100
+xi  x
+[0;34mPASS PATTERN NO.   7,[m [0;32mexecution cycle :   1[m
+xi  5
+xi127
+xi  5
+xi127
+xi  x
+[0;34mPASS PATTERN NO.   8,[m [0;32mexecution cycle :   1[m
+xi 99
+xi100
+xi 99
+xi100
+xi  x
+[0;34mPASS PATTERN NO.   9,[m [0;32mexecution cycle :   1[m
+xi126
+xi127
+xi128
+xi129
+xi  x
+[0;34mPASS PATTERN NO.  10,[m [0;32mexecution cycle :   1[m
+xi128
+xi129
+xi126
+xi127
+xi  x
+[0;34mPASS PATTERN NO.  11,[m [0;32mexecution cycle :   1[m
+xi128
+xi129
+xi126
+xi127
+xi  x
+[0;34mPASS PATTERN NO.  12,[m [0;32mexecution cycle :   1[m
+xi126
+xi127
+xi128
+xi129
+xi  x
+[0;34mPASS PATTERN NO.  13,[m [0;32mexecution cycle :   1[m
+xi128
+xi127
+xi255
+xi  1
+xi  x
+[0;34mPASS PATTERN NO.  14,[m [0;32mexecution cycle :   1[m
+xi128
+xi127
+xi128
+xi129
+xi  x
+[0;34mPASS PATTERN NO.  15,[m [0;32mexecution cycle :   1[m
+xi128
+xi127
+xi126
+xi127
+xi  x
+[0;34mPASS PATTERN NO.  16,[m [0;32mexecution cycle :   1[m
+------------------------------------------------------------------------------------------------------------------------------------------
+                                                    START CIRCLE AND LINE RELATION!                                                       
+------------------------------------------------------------------------------------------------------------------------------------------
+xi 24
+xi 23
+xi224
+xi241
+xi  x
+[0;34mPASS PATTERN NO.   0,[m [0;32mexecution cycle :   1[m
+xi 21
+xi244
+xi 29
+xi 18
+xi  x
+[0;34mPASS PATTERN NO.   1,[m [0;32mexecution cycle :   1[m
+xi228
+xi246
+xi238
+xi244
+xi  x
+[0;34mPASS PATTERN NO.   2,[m [0;32mexecution cycle :   1[m
+xi242
+xi235
+xi227
+xi 30
+xi  x
+[0;34mPASS PATTERN NO.   3,[m [0;32mexecution cycle :   1[m
+xi  1
+xi 24
+xi 12
+xi 24
+xi  x
+[0;34mPASS PATTERN NO.   4,[m [0;32mexecution cycle :   1[m
+xi 13
+xi245
+xi  0
+xi248
+xi  x
+[0;34mPASS PATTERN NO.   5,[m [0;32mexecution cycle :   1[m
+xi234
+xi 27
+xi251
+xi248
+xi  x
+[0;34mPASS PATTERN NO.   6,[m [0;32mexecution cycle :   1[m
+xi252
+xi 30
+xi 31
+xi252
+xi  x
+[0;34mPASS PATTERN NO.   7,[m [0;32mexecution cycle :   1[m
+xi 17
+xi226
+xi254
+xi 30
+xi  x
+[0;34mPASS PATTERN NO.   8,[m [0;32mexecution cycle :   1[m
+xi231
+xi 22
+xi251
+xi235
+xi  x
+[0;34mPASS PATTERN NO.   9,[m [0;32mexecution cycle :   1[m
+xi 28
+xi 29
+xi246
+xi228
+xi  x
+[0;34mPASS PATTERN NO.  10,[m [0;32mexecution cycle :   1[m
+xi 24
+xi242
+xi 31
+xi249
+xi  x
+[0;34mPASS PATTERN NO.  11,[m [0;32mexecution cycle :   1[m
+xi227
+xi238
+xi246
+xi 13
+xi  x
+[0;34mPASS PATTERN NO.  12,[m [0;32mexecution cycle :   1[m
+xi  0
+xi228
+xi 17
+xi  0
+xi  x
+[0;34mPASS PATTERN NO.  13,[m [0;32mexecution cycle :   1[m
+xi245
+xi228
+xi 19
+xi254
+xi  x
+[0;34mPASS PATTERN NO.  14,[m [0;32mexecution cycle :   1[m
+xi235
+xi  4
+xi255
+xi 28
+xi  x
+[0;34mPASS PATTERN NO.  15,[m [0;32mexecution cycle :   1[m
+xi248
+xi227
+xi247
+xi235
+xi  x
+[0;34mPASS PATTERN NO.  16,[m [0;32mexecution cycle :   1[m
+xi243
+xi 19
+xi254
+xi 17
+xi  x
+[0;34mPASS PATTERN NO.  17,[m [0;32mexecution cycle :   1[m
+xi 18
+xi255
+xi 30
+xi241
+xi  x
+[0;34mPASS PATTERN NO.  18,[m [0;32mexecution cycle :   1[m
+xi 14
+xi244
+xi 18
+xi 15
+xi  x
+[0;34mPASS PATTERN NO.  19,[m [0;32mexecution cycle :   1[m
+xi251
+xi 25
+xi  3
+xi 10
+xi  x
+[0;34mPASS PATTERN NO.  20,[m [0;32mexecution cycle :   1[m
+xi244
+xi 27
+xi 18
+xi  7
+xi  x
+[0;34mPASS PATTERN NO.  21,[m [0;32mexecution cycle :   1[m
+xi  2
+xi233
+xi228
+xi  9
+xi  x
+[0;34mPASS PATTERN NO.  22,[m [0;32mexecution cycle :   1[m
+xi240
+xi 31
+xi238
+xi  x
+[0;34mPASS PATTERN NO.  23,[m [0;32mexecution cycle :   1[m
+xi  0
+xi252
+xi236
+xi 26
+xi  x
+[0;34mPASS PATTERN NO.  24,[m [0;32mexecution cycle :   1[m
+xi  4
+xi244
+xi  1
+xi 26
+xi  x
+[0;34mPASS PATTERN NO.  25,[m [0;32mexecution cycle :   1[m
+xi225
+xi  3
+xi255
+xi 23
+xi  x
+[0;34mPASS PATTERN NO.  26,[m [0;32mexecution cycle :   1[m
+xi235
+xi 18
+xi  4
+xi227
+xi  x
+[0;34mPASS PATTERN NO.  27,[m [0;32mexecution cycle :   1[m
+xi232
+xi  5
+xi 21
+xi  x
+[0;34mPASS PATTERN NO.  28,[m [0;32mexecution cycle :   1[m
+xi 23
+xi  0
+xi228
+xi252
+xi  x
+[0;34mPASS PATTERN NO.  29,[m [0;32mexecution cycle :   1[m
+xi255
+xi235
+xi237
+xi 13
+xi  x
+[0;34mPASS PATTERN NO.  30,[m [0;32mexecution cycle :   1[m
+xi 25
+xi 17
+xi  0
+xi  3
+xi  x
+[0;34mPASS PATTERN NO.  31,[m [0;32mexecution cycle :   1[m
+xi243
+xi 29
+xi 14
+xi227
+xi  x
+[0;34mPASS PATTERN NO.  32,[m [0;32mexecution cycle :   1[m
+xi 28
+xi 30
+xi230
+xi  x
+[0;34mPASS PATTERN NO.  33,[m [0;32mexecution cycle :   1[m
+xi251
+xi245
+xi224
+xi  x
+[0;34mPASS PATTERN NO.  34,[m [0;32mexecution cycle :   1[m
+xi  9
+xi 12
+xi  6
+xi 18
+xi  x
+[0;34mPASS PATTERN NO.  35,[m [0;32mexecution cycle :   1[m
+xi 27
+xi 18
+xi  1
+xi238
+xi  x
+[0;34mPASS PATTERN NO.  36,[m [0;32mexecution cycle :   1[m
+xi249
+xi254
+xi  8
+xi 21
+xi  x
+[0;34mPASS PATTERN NO.  37,[m [0;32mexecution cycle :   1[m
+xi 22
+xi 11
+xi249
+xi250
+xi  x
+[0;34mPASS PATTERN NO.  38,[m [0;32mexecution cycle :   1[m
+xi252
+xi236
+xi246
+xi 28
+xi  x
+[0;34mPASS PATTERN NO.  39,[m [0;32mexecution cycle :   1[m
+xi 13
+xi 26
+xi  4
+xi 12
+xi  x
+[0;34mPASS PATTERN NO.  40,[m [0;32mexecution cycle :   1[m
+xi245
+xi244
+xi 14
+xi224
+xi  x
+[0;34mPASS PATTERN NO.  41,[m [0;32mexecution cycle :   1[m
+xi250
+xi 16
+xi246
+xi 22
+xi  x
+[0;34mPASS PATTERN NO.  42,[m [0;32mexecution cycle :   1[m
+xi241
+xi 21
+xi224
+xi 24
+xi  x
+[0;34mPASS PATTERN NO.  43,[m [0;32mexecution cycle :   1[m
+xi  0
+xi 27
+xi 26
+xi225
+xi  x
+[0;34mPASS PATTERN NO.  44,[m [0;32mexecution cycle :   1[m
+xi 17
+xi237
+xi255
+xi229
+xi  x
+[0;34mPASS PATTERN NO.  45,[m [0;32mexecution cycle :   1[m
+xi 25
+xi 12
+xi224
+xi227
+xi  x
+[0;34mPASS PATTERN NO.  46,[m [0;32mexecution cycle :   1[m
+xi  4
+xi 24
+xi 10
+xi241
+xi  x
+[0;34mPASS PATTERN NO.  47,[m [0;32mexecution cycle :   1[m
+xi  2
+xi238
+xi 20
+xi 12
+xi  x
+[0;34mPASS PATTERN NO.  48,[m [0;32mexecution cycle :   1[m
+xi  4
+xi230
+xi232
+xi 28
+xi  x
+[0;34mPASS PATTERN NO.  49,[m [0;32mexecution cycle :   1[m
+xi224
+xi241
+xi235
+xi241
+xi  x
+[0;34mPASS PATTERN NO.  50,[m [0;32mexecution cycle :   1[m
+xi237
+xi244
+xi 25
+xi225
+xi  x
+[0;34mPASS PATTERN NO.  51,[m [0;32mexecution cycle :   1[m
+xi 19
+xi 24
+xi254
+xi237
+xi  x
+[0;34mPASS PATTERN NO.  52,[m [0;32mexecution cycle :   1[m
+xi254
+xi230
+xi254
+xi  8
+xi  x
+[0;34mPASS PATTERN NO.  53,[m [0;32mexecution cycle :   1[m
+xi 11
+xi255
+xi238
+xi  7
+xi  x
+[0;34mPASS PATTERN NO.  54,[m [0;32mexecution cycle :   1[m
+xi 26
+xi242
+xi  1
+xi239
+xi  x
+[0;34mPASS PATTERN NO.  55,[m [0;32mexecution cycle :   1[m
+xi  2
+xi 28
+xi 12
+xi226
+xi  x
+[0;34mPASS PATTERN NO.  56,[m [0;32mexecution cycle :   1[m
+xi253
+xi 17
+xi235
+xi250
+xi  x
+[0;34mPASS PATTERN NO.  57,[m [0;32mexecution cycle :   1[m
+xi242
+xi 13
+xi 11
+xi 27
+xi  x
+[0;34mPASS PATTERN NO.  58,[m [0;32mexecution cycle :   1[m
+xi240
+xi249
+xi  0
+xi230
+xi  x
+[0;34mPASS PATTERN NO.  59,[m [0;32mexecution cycle :   1[m
+xi 16
+xi226
+xi235
+xi  7
+xi  x
+[0;34mPASS PATTERN NO.  60,[m [0;32mexecution cycle :   1[m
+xi237
+xi  4
+xi 17
+xi239
+xi  x
+[0;34mPASS PATTERN NO.  61,[m [0;32mexecution cycle :   1[m
+xi 24
+xi  4
+xi241
+xi233
+xi  x
+[0;34mPASS PATTERN NO.  62,[m [0;32mexecution cycle :   1[m
+xi 13
+xi242
+xi235
+xi240
+xi  x
+[0;34mPASS PATTERN NO.  63,[m [0;32mexecution cycle :   1[m
+xi250
+xi248
+xi247
+xi238
+xi  x
+[0;34mPASS PATTERN NO.  64,[m [0;32mexecution cycle :   1[m
+xi247
+xi 29
+xi 17
+xi236
+xi  x
+[0;34mPASS PATTERN NO.  65,[m [0;32mexecution cycle :   1[m
+xi233
+xi237
+xi239
+xi 27
+xi  x
+[0;34mPASS PATTERN NO.  66,[m [0;32mexecution cycle :   1[m
+xi 24
+xi234
+xi  6
+xi224
+xi  x
+[0;34mPASS PATTERN NO.  67,[m [0;32mexecution cycle :   1[m
+xi 12
+xi  6
+xi248
+xi  9
+xi  x
+[0;34mPASS PATTERN NO.  68,[m [0;32mexecution cycle :   1[m
+xi  7
+xi 24
+xi 19
+xi226
+xi  x
+[0;34mPASS PATTERN NO.  69,[m [0;32mexecution cycle :   1[m
+xi 20
+xi246
+xi  5
+xi224
+xi  x
+[0;34mPASS PATTERN NO.  70,[m [0;32mexecution cycle :   1[m
+xi254
+xi  1
+xi  4
+xi229
+xi  x
+[0;34mPASS PATTERN NO.  71,[m [0;32mexecution cycle :   1[m
+xi 26
+xi244
+xi  0
+xi225
+xi  x
+[0;34mPASS PATTERN NO.  72,[m [0;32mexecution cycle :   1[m
+xi  4
+xi  0
+xi 29
+xi243
+xi  x
+[0;34mPASS PATTERN NO.  73,[m [0;32mexecution cycle :   1[m
+xi 17
+xi 21
+xi 26
+xi 20
+xi  x
+[0;34mPASS PATTERN NO.  74,[m [0;32mexecution cycle :   1[m
+xi 31
+xi253
+xi 23
+xi 19
+xi  x
+[0;34mPASS PATTERN NO.  75,[m [0;32mexecution cycle :   1[m
+xi237
+xi227
+xi229
+xi 22
+xi  x
+[0;34mPASS PATTERN NO.  76,[m [0;32mexecution cycle :   1[m
+xi 30
+xi224
+xi 25
+xi 13
+xi  x
+[0;34mPASS PATTERN NO.  77,[m [0;32mexecution cycle :   1[m
+xi 28
+xi225
+xi247
+xi239
+xi  x
+[0;34mPASS PATTERN NO.  78,[m [0;32mexecution cycle :   1[m
+xi234
+xi 25
+xi238
+xi 18
+xi  x
+[0;34mPASS PATTERN NO.  79,[m [0;32mexecution cycle :   1[m
+xi 20
+xi233
+xi 26
+xi  3
+xi  x
+[0;34mPASS PATTERN NO.  80,[m [0;32mexecution cycle :   1[m
+xi246
+xi 19
+xi 23
+xi 25
+xi  x
+[0;34mPASS PATTERN NO.  81,[m [0;32mexecution cycle :   1[m
+xi226
+xi 10
+xi 15
+xi  x
+[0;34mPASS PATTERN NO.  82,[m [0;32mexecution cycle :   1[m
+xi  5
+xi 27
+xi245
+xi239
+xi  x
+[0;34mPASS PATTERN NO.  83,[m [0;32mexecution cycle :   1[m
+xi  3
+xi227
+xi248
+xi245
+xi  x
+[0;34mPASS PATTERN NO.  84,[m [0;32mexecution cycle :   1[m
+xi235
+xi 29
+xi  9
+xi 22
+xi  x
+[0;34mPASS PATTERN NO.  85,[m [0;32mexecution cycle :   1[m
+xi 17
+xi229
+xi250
+xi  x
+[0;34mPASS PATTERN NO.  86,[m [0;32mexecution cycle :   1[m
+xi253
+xi 19
+xi228
+xi 28
+xi  x
+[0;34mPASS PATTERN NO.  87,[m [0;32mexecution cycle :   1[m
+xi251
+xi229
+xi  6
+xi  1
+xi  x
+[0;34mPASS PATTERN NO.  88,[m [0;32mexecution cycle :   1[m
+xi  3
+xi 20
+xi244
+xi 25
+xi  x
+[0;34mPASS PATTERN NO.  89,[m [0;32mexecution cycle :   1[m
+xi235
+xi  6
+xi 19
+xi  6
+xi  x
+[0;34mPASS PATTERN NO.  90,[m [0;32mexecution cycle :   1[m
+xi246
+xi227
+xi252
+xi226
+xi  x
+[0;34mPASS PATTERN NO.  91,[m [0;32mexecution cycle :   1[m
+xi 31
+xi 10
+xi  1
+xi247
+xi  x
+[0;34mPASS PATTERN NO.  92,[m [0;32mexecution cycle :   1[m
+xi  9
+xi242
+xi 21
+xi227
+xi  x
+[0;34mPASS PATTERN NO.  93,[m [0;32mexecution cycle :   1[m
+xi233
+xi  7
+xi  9
+xi238
+xi  x
+[0;34mPASS PATTERN NO.  94,[m [0;32mexecution cycle :   1[m
+xi  6
+xi250
+xi241
+xi 25
+xi  x
+[0;34mPASS PATTERN NO.  95,[m [0;32mexecution cycle :   1[m
+xi  3
+xi 21
+xi 14
+xi234
+xi  x
+[0;34mPASS PATTERN NO.  96,[m [0;32mexecution cycle :   1[m
+xi247
+xi245
+xi  7
+xi238
+xi  x
+[0;34mPASS PATTERN NO.  97,[m [0;32mexecution cycle :   1[m
+xi225
+xi 13
+xi226
+xi 10
+xi  x
+[0;34mPASS PATTERN NO.  98,[m [0;32mexecution cycle :   1[m
+xi237
+xi 11
+xi  1
+xi 14
+xi  x
+[0;34mPASS PATTERN NO.  99,[m [0;32mexecution cycle :   1[m
+xi 16
+xi244
+xi232
+xi  x
+[0;34mPASS PATTERN NO. 100,[m [0;32mexecution cycle :   1[m
+xi244
+xi247
+xi238
+xi  x
+[0;34mPASS PATTERN NO. 101,[m [0;32mexecution cycle :   1[m
+xi226
+xi 29
+xi  6
+xi  x
+[0;34mPASS PATTERN NO. 102,[m [0;32mexecution cycle :   1[m
+xi 13
+xi246
+xi 13
+xi  x
+[0;34mPASS PATTERN NO. 103,[m [0;32mexecution cycle :   1[m
+xi  2
+xi 28
+xi  2
+xi  x
+[0;34mPASS PATTERN NO. 104,[m [0;32mexecution cycle :   1[m
+xi225
+xi 25
+xi250
+xi  x
+[0;34mPASS PATTERN NO. 105,[m [0;32mexecution cycle :   1[m
+xi 10
+xi  1
+xi 10
+xi  x
+[0;34mPASS PATTERN NO. 106,[m [0;32mexecution cycle :   1[m
+xi 15
+xi238
+xi254
+xi  x
+[0;34mPASS PATTERN NO. 107,[m [0;32mexecution cycle :   1[m
+xi243
+xi236
+xi243
+xi  x
+[0;34mPASS PATTERN NO. 108,[m [0;32mexecution cycle :   1[m
+xi224
+xi 22
+xi 17
+xi  x
+[0;34mPASS PATTERN NO. 109,[m [0;32mexecution cycle :   1[m
+xi  5
+xi245
+xi 27
+xi  x
+[0;34mPASS PATTERN NO. 110,[m [0;32mexecution cycle :   1[m
+xi 12
+xi248
+xi 12
+xi  x
+[0;34mPASS PATTERN NO. 111,[m [0;32mexecution cycle :   1[m
+xi252
+xi247
+xi  7
+xi  x
+[0;34mPASS PATTERN NO. 112,[m [0;32mexecution cycle :   1[m
+xi255
+xi226
+xi255
+xi  x
+[0;34mPASS PATTERN NO. 113,[m [0;32mexecution cycle :   1[m
+xi251
+xi234
+xi251
+xi  x
+[0;34mPASS PATTERN NO. 114,[m [0;32mexecution cycle :   1[m
+xi 25
+xi243
+xi  7
+xi  x
+[0;34mPASS PATTERN NO. 115,[m [0;32mexecution cycle :   1[m
+xi244
+xi241
+xi244
+xi  x
+[0;34mPASS PATTERN NO. 116,[m [0;32mexecution cycle :   1[m
+xi  0
+xi 18
+xi 12
+xi  x
+[0;34mPASS PATTERN NO. 117,[m [0;32mexecution cycle :   1[m
+xi255
+xi 10
+xi 12
+xi  x
+[0;34mPASS PATTERN NO. 118,[m [0;32mexecution cycle :   1[m
+------------------------------------------------------------------------------------------------------------------------------------------
+                                                    START AREA CALCULATION!                                                               
+------------------------------------------------------------------------------------------------------------------------------------------
+xi 56
+xi247
+xi192
+xi209
+xi  x
+[0;34mPASS PATTERN NO.   0,[m [0;32mexecution cycle :   1[m
+xi 50
+xi 53
+xi212
+xi125
+xi  x
+[0;34mPASS PATTERN NO.   1,[m [0;32mexecution cycle :   1[m
+xi212
+xi196
+xi214
+xi 78
+xi  x
+[0;34mPASS PATTERN NO.   2,[m [0;32mexecution cycle :   1[m
+xi190
+xi195
+xi203
+xi 82
+xi  x
+[0;34mPASS PATTERN NO.   3,[m [0;32mexecution cycle :   1[m
+xi120
+xi225
+xi236
+xi120
+xi  x
+[0;34mPASS PATTERN NO.   4,[m [0;32mexecution cycle :   1[m
+xi 88
+xi173
+xi213
+xi224
+xi  x
+[0;34mPASS PATTERN NO.   5,[m [0;32mexecution cycle :   1[m
+xi 27
+xi187
+xi 74
+xi 24
+xi  x
+[0;34mPASS PATTERN NO.   6,[m [0;32mexecution cycle :   1[m
+xi 63
+xi 28
+xi254
+xi 92
+xi  x
+[0;34mPASS PATTERN NO.   7,[m [0;32mexecution cycle :   1[m
+xi 66
+xi241
+xi158
+xi126
+xi  x
+[0;34mPASS PATTERN NO.   8,[m [0;32mexecution cycle :   1[m
+xi135
+xi139
+xi219
+xi246
+xi  x
+[0;34mPASS PATTERN NO.   9,[m [0;32mexecution cycle :   1[m
+xi210
+xi153
+xi184
+xi 63
+xi  x
+[0;34mPASS PATTERN NO.  10,[m [0;32mexecution cycle :   1[m
+xi237
+xi131
+xi142
+xi 22
+xi  x
+[0;34mPASS PATTERN NO.  11,[m [0;32mexecution cycle :   1[m
+xi 96
+xi224
+xi132
+xi177
+xi  x
+[0;34mPASS PATTERN NO.  12,[m [0;32mexecution cycle :   1[m
+xi213
+xi 30
+xi 68
+xi115
+xi  x
+[0;34mPASS PATTERN NO.  13,[m [0;32mexecution cycle :   1[m
+xi203
+xi159
+xi164
+xi188
+xi  x
+[0;34mPASS PATTERN NO.  14,[m [0;32mexecution cycle :   1[m
+xi215
+xi203
+xi195
+xi152
+xi  x
+[0;34mPASS PATTERN NO.  15,[m [0;32mexecution cycle :   1[m
+xi243
+xi241
+xi222
+xi 19
+xi  x
+[0;34mPASS PATTERN NO.  16,[m [0;32mexecution cycle :   1[m
+xi 95
+xi145
+xi254
+xi114
+xi  x
+[0;34mPASS PATTERN NO.  17,[m [0;32mexecution cycle :   1[m
+xi 84
+xi 47
+xi238
+xi242
+xi  x
+[0;34mPASS PATTERN NO.  18,[m [0;32mexecution cycle :   1[m
+xi 35
+xi219
+xi185
+xi234
+xi  x
+[0;34mPASS PATTERN NO.  19,[m [0;32mexecution cycle :   1[m
+xi 84
+xi178
+xi103
+xi123
+xi  x
+[0;34mPASS PATTERN NO.  20,[m [0;32mexecution cycle :   1[m
+xi105
+xi 34
+xi137
+xi196
+xi  x
+[0;34mPASS PATTERN NO.  21,[m [0;32mexecution cycle :   1[m
+xi 78
+xi208
+xi191
+xi206
+xi  x
+[0;34mPASS PATTERN NO.  22,[m [0;32mexecution cycle :   1[m
+xi 92
+xi 96
+xi 58
+xi140
+xi  x
+[0;34mPASS PATTERN NO.  23,[m [0;32mexecution cycle :   1[m
+xi250
+xi161
+xi164
+xi148
+xi  x
+[0;34mPASS PATTERN NO.  24,[m [0;32mexecution cycle :   1[m
+xi 65
+xi 55
+xi 31
+xi 99
+xi  x
+[0;34mPASS PATTERN NO.  25,[m [0;32mexecution cycle :   1[m
+xi245
+xi200
+xi  8
+xi 37
+xi  x
+[0;34mPASS PATTERN NO.  26,[m [0;32mexecution cycle :   1[m
+xi 55
+xi  4
+xi160
+xi 28
+xi  x
+[0;34mPASS PATTERN NO.  27,[m [0;32mexecution cycle :   1[m
+xi 45
+xi203
+xi159
+xi205
+xi  x
+[0;34mPASS PATTERN NO.  28,[m [0;32mexecution cycle :   1[m
+xi110
+xi  3
+xi253
+xi147
+xi  x
+[0;34mPASS PATTERN NO.  29,[m [0;32mexecution cycle :   1[m
+xi252
+xi198
+xi190
+xi254
+xi  x
+[0;34mPASS PATTERN NO.  30,[m [0;32mexecution cycle :   1[m
+xi242
+xi169
+xi236
+xi 38
+xi  x
+[0;34mPASS PATTERN NO.  31,[m [0;32mexecution cycle :   1[m
+xi123
+xi 97
+xi242
+xi 14
+xi  x
+[0;34mPASS PATTERN NO.  32,[m [0;32mexecution cycle :   1[m
+xi222
+xi181
+xi168
+xi 25
+xi  x
+[0;34mPASS PATTERN NO.  33,[m [0;32mexecution cycle :   1[m
+xi 43
+xi153
+xi182
+xi218
+xi  x
+[0;34mPASS PATTERN NO.  34,[m [0;32mexecution cycle :   1[m
+xi 60
+xi220
+xi 76
+xi 86
+xi  x
+[0;34mPASS PATTERN NO.  35,[m [0;32mexecution cycle :   1[m
+xi236
+xi164
+xi173
+xi 58
+xi  x
+[0;34mPASS PATTERN NO.  36,[m [0;32mexecution cycle :   1[m
+xi238
+xi213
+xi192
+xi 20
+xi  x
+[0;34mPASS PATTERN NO.  37,[m [0;32mexecution cycle :   1[m
+xi246
+xi214
+xi154
+xi240
+xi  x
+[0;34mPASS PATTERN NO.  38,[m [0;32mexecution cycle :   1[m
+xi184
+xi  0
+xi 17
+xi 53
+xi  x
+[0;34mPASS PATTERN NO.  39,[m [0;32mexecution cycle :   1[m
+xi 59
+xi 32
+xi  1
+xi186
+xi  x
+[0;34mPASS PATTERN NO.  40,[m [0;32mexecution cycle :   1[m
+xi133
+xi141
+xi113
+xi 95
+xi  x
+[0;34mPASS PATTERN NO.  41,[m [0;32mexecution cycle :   1[m
+xi100
+xi184
+xi234
+xi145
+xi  x
+[0;34mPASS PATTERN NO.  42,[m [0;32mexecution cycle :   1[m
+xi 78
+xi226
+xi172
+xi116
+xi  x
+[0;34mPASS PATTERN NO.  43,[m [0;32mexecution cycle :   1[m
+xi188
+xi198
+xi228
+xi  8
+xi  x
+[0;34mPASS PATTERN NO.  44,[m [0;32mexecution cycle :   1[m
+xi 81
+xi139
+xi209
+xi 64
+xi  x
+[0;34mPASS PATTERN NO.  45,[m [0;32mexecution cycle :   1[m
+xi179
+xi158
+xi141
+xi248
+xi  x
+[0;34mPASS PATTERN NO.  46,[m [0;32mexecution cycle :   1[m
+xi168
+xi 30
+xi 94
+xi 70
+xi  x
+[0;34mPASS PATTERN NO.  47,[m [0;32mexecution cycle :   1[m
+xi231
+xi223
+xi235
+xi142
+xi  x
+[0;34mPASS PATTERN NO.  48,[m [0;32mexecution cycle :   1[m
+xi 18
+xi186
+xi161
+xi 15
+xi  x
+[0;34mPASS PATTERN NO.  49,[m [0;32mexecution cycle :   1[m
+xi 44
+xi130
+xi252
+xi226
+xi  x
+[0;34mPASS PATTERN NO.  50,[m [0;32mexecution cycle :   1[m
+xi 93
+xi 75
+xi 90
+xi113
+xi  x
+[0;34mPASS PATTERN NO.  51,[m [0;32mexecution cycle :   1[m
+xi 45
+xi187
+xi235
+xi 18
+xi  x
+[0;34mPASS PATTERN NO.  52,[m [0;32mexecution cycle :   1[m
+xi 80
+xi224
+xi217
+xi198
+xi  x
+[0;34mPASS PATTERN NO.  53,[m [0;32mexecution cycle :   1[m
+xi112
+xi194
+xi167
+xi203
+xi  x
+[0;34mPASS PATTERN NO.  54,[m [0;32mexecution cycle :   1[m
+xi 36
+xi143
+xi177
+xi141
+xi  x
+[0;34mPASS PATTERN NO.  55,[m [0;32mexecution cycle :   1[m
+xi 81
+xi 73
+xi 56
+xi228
+xi  x
+[0;34mPASS PATTERN NO.  56,[m [0;32mexecution cycle :   1[m
+xi 18
+xi 16
+xi139
+xi237
+xi  x
+[0;34mPASS PATTERN NO.  57,[m [0;32mexecution cycle :   1[m
+xi 26
+xi 24
+xi151
+xi142
+xi  x
+[0;34mPASS PATTERN NO.  58,[m [0;32mexecution cycle :   1[m
+xi 87
+xi 76
+xi177
+xi125
+xi  x
+[0;34mPASS PATTERN NO.  59,[m [0;32mexecution cycle :   1[m
+xi 79
+xi141
+xi187
+xi 73
+xi  x
+[0;34mPASS PATTERN NO.  60,[m [0;32mexecution cycle :   1[m
+xi120
+xi 38
+xi128
+xi138
+xi  x
+[0;34mPASS PATTERN NO.  61,[m [0;32mexecution cycle :   1[m
+xi236
+xi166
+xi216
+xi 41
+xi  x
+[0;34mPASS PATTERN NO.  62,[m [0;32mexecution cycle :   1[m
+xi103
+xi130
+xi184
+xi 51
+xi  x
+[0;34mPASS PATTERN NO.  63,[m [0;32mexecution cycle :   1[m
+xi192
+xi150
+xi180
+xi101
+xi  x
+[0;34mPASS PATTERN NO.  64,[m [0;32mexecution cycle :   1[m
+xi 97
+xi100
+xi133
+xi158
+xi  x
+[0;34mPASS PATTERN NO.  65,[m [0;32mexecution cycle :   1[m
+xi 84
+xi224
+xi129
+xi250
+xi  x
+[0;34mPASS PATTERN NO.  66,[m [0;32mexecution cycle :   1[m
+xi224
+xi211
+xi189
+xi164
+xi  x
+[0;34mPASS PATTERN NO.  67,[m [0;32mexecution cycle :   1[m
+xi 58
+xi180
+xi241
+xi245
+xi  x
+[0;34mPASS PATTERN NO.  68,[m [0;32mexecution cycle :   1[m
+xi119
+xi 29
+xi179
+xi127
+xi  x
+[0;34mPASS PATTERN NO.  69,[m [0;32mexecution cycle :   1[m
+xi246
+xi195
+xi  5
+xi 77
+xi  x
+[0;34mPASS PATTERN NO.  70,[m [0;32mexecution cycle :   1[m
+xi  0
+xi254
+xi185
+xi173
+xi  x
+[0;34mPASS PATTERN NO.  71,[m [0;32mexecution cycle :   1[m
+xi129
+xi188
+xi215
+xi 79
+xi  x
+[0;34mPASS PATTERN NO.  72,[m [0;32mexecution cycle :   1[m
+xi 50
+xi142
+xi202
+xi185
+xi  x
+[0;34mPASS PATTERN NO.  73,[m [0;32mexecution cycle :   1[m
+xi 35
+xi244
+xi137
+xi186
+xi  x
+[0;34mPASS PATTERN NO.  74,[m [0;32mexecution cycle :   1[m
+xi119
+xi243
+xi185
+xi214
+xi  x
+[0;34mPASS PATTERN NO.  75,[m [0;32mexecution cycle :   1[m
+xi111
+xi239
+xi170
+xi194
+xi  x
+[0;34mPASS PATTERN NO.  76,[m [0;32mexecution cycle :   1[m
+xi 21
+xi207
+xi229
+xi123
+xi  x
+[0;34mPASS PATTERN NO.  77,[m [0;32mexecution cycle :   1[m
+xi 88
+xi131
+xi 21
+xi 35
+xi  x
+[0;34mPASS PATTERN NO.  78,[m [0;32mexecution cycle :   1[m
+xi118
+xi 61
+xi 41
+xi 75
+xi  x
+[0;34mPASS PATTERN NO.  79,[m [0;32mexecution cycle :   1[m
+xi  5
+xi218
+xi154
+xi177
+xi  x
+[0;34mPASS PATTERN NO.  80,[m [0;32mexecution cycle :   1[m
+xi188
+xi132
+xi 29
+xi115
+xi  x
+[0;34mPASS PATTERN NO.  81,[m [0;32mexecution cycle :   1[m
+xi 33
+xi  5
+xi 27
+xi102
+xi  x
+[0;34mPASS PATTERN NO.  82,[m [0;32mexecution cycle :   1[m
+xi 57
+xi244
+xi163
+xi212
+xi  x
+[0;34mPASS PATTERN NO.  83,[m [0;32mexecution cycle :   1[m
+xi 51
+xi166
+xi 11
+xi  x
+[0;34mPASS PATTERN NO.  84,[m [0;32mexecution cycle :   1[m
+xi  3
+xi  2
+xi220
+xi 86
+xi  x
+[0;34mPASS PATTERN NO.  85,[m [0;32mexecution cycle :   1[m
+xi234
+xi161
+xi 23
+xi127
+xi  x
+[0;34mPASS PATTERN NO.  86,[m [0;32mexecution cycle :   1[m
+xi245
+xi146
+xi195
+xi233
+xi  x
+[0;34mPASS PATTERN NO.  87,[m [0;32mexecution cycle :   1[m
+xi105
+xi 39
+xi142
+xi137
+xi  x
+[0;34mPASS PATTERN NO.  88,[m [0;32mexecution cycle :   1[m
+xi102
+xi185
+xi209
+xi 26
+xi  x
+[0;34mPASS PATTERN NO.  89,[m [0;32mexecution cycle :   1[m
+xi 46
+xi163
+xi181
+xi 10
+xi  x
+[0;34mPASS PATTERN NO.  90,[m [0;32mexecution cycle :   1[m
+xi 87
+xi206
+xi231
+xi 85
+xi  x
+[0;34mPASS PATTERN NO.  91,[m [0;32mexecution cycle :   1[m
+xi  1
+xi170
+xi173
+xi 66
+xi  x
+[0;34mPASS PATTERN NO.  92,[m [0;32mexecution cycle :   1[m
+xi 77
+xi238
+xi 97
+xi107
+xi  x
+[0;34mPASS PATTERN NO.  93,[m [0;32mexecution cycle :   1[m
+----------------------------------------------------------------------------------------------------------------------
+                                                  Congratulations!                                                                       
+                                           You have passed all patterns!                                                                 
+                                           Your execution cycles =   230 cycles                                                            
+                                           Your clock period = 12.0 ns                                                               
+                                           Total Latency = 2760.0 ns                                                               
+----------------------------------------------------------------------------------------------------------------------
+$finish called from file "PATTERN.v", line 367.
+$finish at simulation time           1455954000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1455954000 ps
+CPU Time:      0.710 seconds;       Data structure size:   0.0Mb
+Thu Oct 26 02:05:10 2023
+CPU time: .647 seconds to compile + .483 seconds to elab + .518 seconds to link + .750 seconds in simulation

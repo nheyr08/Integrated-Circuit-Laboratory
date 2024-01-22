@@ -1,0 +1,41 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Mon Jan 22 13:35:05 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Nets                                                               27
+    Unloaded nets (LINT-2)                                         27
+--------------------------------------------------------------------------------
+
+Warning: In design 'CC', net 'net63' driven by pin 'div_103/QUOTIENT_8' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net62' driven by pin 'div_103/QUOTIENT_9' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net61' driven by pin 'div_103/QUOTIENT_10' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net60' driven by pin 'div_103/QUOTIENT_11' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net59' driven by pin 'div_103/QUOTIENT_12' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net58' driven by pin 'div_103/QUOTIENT_13' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net57' driven by pin 'div_103/QUOTIENT_14' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net56' driven by pin 'div_103/QUOTIENT_15' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net55' driven by pin 'div_103/QUOTIENT_16' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net54' driven by pin 'div_107/QUOTIENT_8' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net53' driven by pin 'div_107/QUOTIENT_9' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net52' driven by pin 'div_107/QUOTIENT_10' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net51' driven by pin 'div_107/QUOTIENT_11' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net50' driven by pin 'div_107/QUOTIENT_12' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net49' driven by pin 'div_107/QUOTIENT_13' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net48' driven by pin 'div_107/QUOTIENT_14' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net47' driven by pin 'div_107/QUOTIENT_15' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net46' driven by pin 'div_107/QUOTIENT_16' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net45' driven by pin 'sub_121/Z_18' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net44' driven by pin 'C1126/Z' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net43' driven by pin 'C1112/Z' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net42' driven by pin 'C1122/Z' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net41' driven by pin 'C1107/Z' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net40' driven by pin 'C1136/Z' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net39' driven by pin 'C1135/Z' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net38' driven by pin 'C1129/Z' has no loads. (LINT-2)
+Warning: In design 'CC', net 'net37' driven by pin 'C1093/Z' has no loads. (LINT-2)
+1

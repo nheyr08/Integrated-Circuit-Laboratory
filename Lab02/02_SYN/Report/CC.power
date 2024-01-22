@@ -1,0 +1,54 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : CC
+Version: T-2022.03
+Date   : Mon Jan 22 13:39:55 2024
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   1.5555 mW   (86%)
+  Net Switching Power  = 244.7238 uW   (14%)
+                         ---------
+Total Dynamic Power    =   1.8002 mW  (100%)
+
+Cell Leakage Power     =  27.5021 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      1.0416            0.0000            0.0000            0.0000  (   0.00%)  i
+register       5.5074e-02        8.8457e-03        9.3297e+05            1.1065  (  60.54%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.4588            0.2359        2.6569e+07            0.7213  (  39.46%)
+--------------------------------------------------------------------------------------------------
+Total              1.5555 mW         0.2447 mW     2.7502e+07 pW         1.8277 mW
+1

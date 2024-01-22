@@ -1,0 +1,28 @@
+Warning: Design 'HT_TOP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : port
+Design : HT_TOP
+Version: T-2022.03
+Date   : Wed Nov  1 18:25:53 2023
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk            in      0.0000   0.0000    3.00    0.15   --         d
+in_valid       in      0.0000   0.0000    3.00    0.15   --         
+in_weight[0]   in      0.0000   0.0000    3.00    0.15   --         
+in_weight[1]   in      0.0000   0.0000    3.00    0.15   --         
+in_weight[2]   in      0.0000   0.0000    3.00    0.15   --         
+out_mode       in      0.0000   0.0000    3.00    0.15   --         
+rst_n          in      0.0000   0.0000    3.00    0.15   --         
+out_code       out     0.0500   0.0000   --      --      --         
+out_valid      out     0.0500   0.0000   --      --      --         
+
+1

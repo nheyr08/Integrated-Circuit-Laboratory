@@ -1,0 +1,194 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : CAD
+Version: T-2022.03
+Date   : Thu Dec 14 01:02:22 2023
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: top
+
+  Startpoint: in_valid2 (input port clocked by clk)
+  Endpoint: plk_td5_reg[25]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CAD                enG200K               fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    10.00      10.00 f
+  in_valid2 (in)                           0.00      10.00 f
+  U2928/O (NR2P)                           0.49      10.49 r
+  U2360/O (ND3)                            0.33      10.82 f
+  U2759/O (NR2)                            0.48      11.30 r
+  U3949/O (INV1S)                          0.45      11.75 f
+  U2747/O (ND2S)                           0.49      12.23 r
+  U2396/O (AN4B1)                          0.42      12.66 f
+  U3265/O (BUF2)                           0.64      13.30 f
+  U2503/O (NR2)                            0.49      13.79 r
+  U2672/O (NR2)                            0.25      14.04 f
+  U2261/O (INV1S)                          0.36      14.40 r
+  U3955/O (ND2P)                           0.13      14.53 f
+  U3302/O (NR2)                            0.39      14.93 r
+  U2756/O (ND2)                            0.38      15.30 f
+  U2495/O (NR2P)                           0.26      15.57 r
+  U2227/O (ND2S)                           0.29      15.86 f
+  U2204/O (NR2P)                           0.23      16.08 r
+  U2203/O (AOI12H)                         0.18      16.26 f
+  U2202/O (OAI12H)                         0.35      16.61 r
+  U3313/O (AOI12HS)                        0.29      16.91 f
+  U2201/O (OAI12H)                         0.32      17.23 r
+  U2433/O (AOI12HS)                        0.33      17.56 f
+  U2225/O (OAI12HP)                        0.30      17.86 r
+  U2224/O (AOI12HP)                        0.17      18.02 f
+  U4437/O (OAI12HT)                        0.22      18.25 r
+  U2223/O (AOI12HP)                        0.15      18.39 f
+  U2179/O (OAI12HP)                        0.23      18.62 r
+  U2194/O (AOI12H)                         0.17      18.80 f
+  U3132/O (OAI12HS)                        0.30      19.10 r
+  U3131/O (XNR2HS)                         0.21      19.30 r
+  U4687/O (MOAI1S)                         0.36      19.67 r
+  plk_td5_reg[25]/D (QDFFRBS)              0.00      19.67 r
+  data arrival time                                  19.67
+
+  clock clk (rise edge)                   20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -0.10      19.90
+  plk_td5_reg[25]/CK (QDFFRBS)             0.00      19.90 r
+  library setup time                      -0.23      19.67
+  data required time                                 19.67
+  -----------------------------------------------------------
+  data required time                                 19.67
+  data arrival time                                 -19.67
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: in_valid2 (input port clocked by clk)
+  Endpoint: Addr_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CAD                enG200K               fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    10.00      10.00 f
+  in_valid2 (in)                           0.00      10.00 f
+  U3255/O (INV1S)                          0.20      10.20 r
+  U3258/O (INV1S)                          0.88      11.09 f
+  U4107/O (NR2P)                           0.43      11.51 r
+  U2369/O (ND2)                            0.68      12.19 f
+  U2482/O (OA12S)                          1.01      13.20 f
+  U4281/O (NR2)                            0.55      13.75 r
+  U4292/O (INV1S)                          0.92      14.67 f
+  U2818/O (OA112S)                         0.57      15.25 f
+  U2815/O (ND3S)                           0.35      15.60 r
+  DP_OP_834J1_132_1610/U10/C (HA1S)        0.33      15.92 r
+  DP_OP_834J1_132_1610/U9/C (HA1S)         0.31      16.24 r
+  DP_OP_834J1_132_1610/U8/C (HA1S)         0.31      16.55 r
+  DP_OP_834J1_132_1610/U7/C (HA1S)         0.31      16.86 r
+  DP_OP_834J1_132_1610/U6/C (HA1S)         0.31      17.17 r
+  DP_OP_834J1_132_1610/U5/C (HA1S)         0.31      17.49 r
+  DP_OP_834J1_132_1610/U4/C (HA1S)         0.31      17.80 r
+  DP_OP_834J1_132_1610/U3/C (HA1S)         0.31      18.11 r
+  DP_OP_834J1_132_1610/U2/C (HA1S)         0.32      18.43 r
+  U4465/O (XOR2HS)                         0.20      18.63 r
+  U2521/O (ND2S)                           0.15      18.78 f
+  U4472/O (AN4B1S)                         0.37      19.15 f
+  U4473/O (MOAI1S)                         0.48      19.63 r
+  Addr_reg[10]/D (QDFFRBS)                 0.00      19.63 r
+  data arrival time                                  19.63
+
+  clock clk (rise edge)                   20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -0.10      19.90
+  Addr_reg[10]/CK (QDFFRBS)                0.00      19.90 r
+  library setup time                      -0.23      19.67
+  data required time                                 19.67
+  -----------------------------------------------------------
+  data required time                                 19.67
+  data arrival time                                 -19.63
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: ctr_b_1_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: mr_2_reg_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CAD                enG200K               fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  ctr_b_1_reg/CK (QDFFRBS)                 0.00       0.00 r
+  ctr_b_1_reg/Q (QDFFRBS)                  0.46       0.46 f
+  U2200/O (INV2)                           0.91       1.37 r
+  U2911/O (INV2)                           0.87       2.24 f
+  U2790/O (OR2)                            0.53       2.77 f
+  U5026/O (OR2)                            0.35       3.12 f
+  U2452/O (NR2)                            1.26       4.38 r
+  U2373/O (INV2)                           0.71       5.09 f
+  U2187/O (NR2)                            1.45       6.54 r
+  U5465/O (OR2)                            0.71       7.25 r
+  U2722/O (ND2S)                           0.16       7.41 f
+  U3273/O (ND3S)                           0.22       7.64 r
+  U5497/O (NR3)                            0.25       7.89 f
+  U5499/O (ND3)                            1.27       9.16 r
+  U5532/O (INV1S)                          0.61       9.78 f
+  U5533/O (MOAI1S)                         0.56      10.34 r
+  U5534/O (ND2)                            0.81      11.15 f
+  U5606/O (OAI22S)                         0.58      11.73 r
+  U2341/S (HA1S)                           0.41      12.14 f
+  U5626/CO (FA1S)                          0.61      12.75 f
+  U5625/CO (FA1S)                          0.57      13.32 f
+  U5624/CO (FA1S)                          0.57      13.89 f
+  U5623/CO (FA1S)                          0.57      14.45 f
+  U5622/CO (FA1S)                          0.57      15.02 f
+  U5621/CO (FA1S)                          0.57      15.59 f
+  U5620/CO (FA1S)                          0.57      16.15 f
+  U5619/CO (FA1S)                          0.57      16.72 f
+  U5618/CO (FA1S)                          0.57      17.29 f
+  U5617/CO (FA1S)                          0.57      17.86 f
+  U5616/CO (FA1S)                          0.57      18.42 f
+  U5615/S (FA1S)                           0.70      19.12 r
+  U3202/O (MUX2S)                          0.33      19.45 r
+  mr_2_reg_reg[14]/D (QDFFRBS)             0.00      19.45 r
+  data arrival time                                  19.45
+
+  clock clk (rise edge)                   20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -0.10      19.90
+  mr_2_reg_reg[14]/CK (QDFFRBS)            0.00      19.90 r
+  library setup time                      -0.18      19.72
+  data required time                                 19.72
+  -----------------------------------------------------------
+  data required time                                 19.72
+  data arrival time                                 -19.45
+  -----------------------------------------------------------
+  slack (MET)                                         0.27
+
+
+1

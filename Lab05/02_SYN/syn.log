@@ -1,0 +1,1219 @@
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+#
+#set search_path {./../01_RTL \
+                 ./../04_MEM/ \
+                                 /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/ \
+                 /~iclabta01/umc018/Synthesis/ }
+#/usr/synthesis/libraries/syn/ \
+                 #/usr/synthesis/dw/ }
+#set synthetic_library {dw_foundation.sldb}
+#set link_library {MYMEMORY_WC.db MEMORY2_WC.db fsa0m_a_generic_core_ss1p62v125c.db fsa0m_a_generic_core_ff1p98vm40c.db fsa0m_a_t33_generic_io_ss1p62v125c.db fsa0m_a_t33_generic_io_tt1p8v25c.db dw_foundation.sldb} 
+#set target_library {slow.db}
+#
+#======================================================
+# (A) Global Parameters
+#======================================================
+set DESIGN "CAD"
+CAD
+set CYCLE 20
+20
+set INPUT_DLY [expr 0.5*$CYCLE]
+10.0
+set OUTPUT_DLY [expr 0.5*$CYCLE]
+10.0
+#======================================================
+# (B) Read RTL Code
+#======================================================
+# (B-1) analyze + elaborate
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ../01_RTL/CAD.v
+Presto compilation completed successfully.
+Loading db file '/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db'
+Loading db file '/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ff1p98vm40c.db'
+Loading db file '/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_ss1p62v125c.db'
+Loading db file '/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_tt1p8v25c.db'
+Loading db file '/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_k3_WC.db'
+Loading db file '/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o1_WC.db'
+Loading db file '/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o2_WC.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+  Loading link library 'fsa0m_a_generic_core_ss1p62v125c'
+  Loading link library 'fsa0m_a_generic_core_ff1p98vm40c'
+  Loading link library 'fsa0m_a_t33_generic_io_ss1p62v125c'
+  Loading link library 'fsa0m_a_t33_generic_io_tt1p8v25c'
+  Loading link library 'T_k3_WC'
+  Loading link library 'T_o1_WC'
+  Loading link library 'T_o2_WC'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../01_RTL/CAD.v:38: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:39: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:166: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:169: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:172: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:175: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:306: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:314: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:364: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1518: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1519: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1520: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1521: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1522: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1524: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1525: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1526: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1527: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1528: signed to unsigned assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1730: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1731: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1732: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1733: unsigned to signed assignment occurs. (VER-318)
+Warning:  ../01_RTL/CAD.v:1734: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 1257 in file
+        '../01_RTL/CAD.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1319           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine CAD line 59 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     set_on_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pwr_up_reg      | Flip-flop |  18   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 77 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   value_trace_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_flag_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     set_vd_reg      | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     set_vd_reg      | Flip-flop |   7   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   set_valend_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   set_valend_reg    | Flip-flop |   7   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     ctr_end_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     ctr_end_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 131 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ctr_0_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 159 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      temp_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 179 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     diffect_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      rps_t_reg      | Flip-flop |  26   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 200 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    operation_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 211 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   wordline_1_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    wordline_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   wordline_0_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 224 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CS_INV_reg      | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     CS_INV2_reg     | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     CS_INV1_reg     | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 237 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CS_COL_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 246 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CS_COL__reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 255 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    CS_COL_1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 264 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    CS_COL_2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 273 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ctr_9_reg      | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      Addr_reg       | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      Addr0_reg      | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      DI_1_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      DI_2_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      Addr1_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       DI__reg       | Flip-flop |  40   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      WEB__reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      WEB_0_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      WEB_K_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     ctr_10_reg      | Flip-flop |  26   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      ctr_3_reg      | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      limit_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     paddle_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 698 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mand__reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 720 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ctr_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 786 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CS_ROW_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 829 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CS_TOP_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 851 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CS_INV__reg     | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 903 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     datak1_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 917 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     datak2_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 931 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     datak3_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 945 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     datak4_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 959 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     datak5_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1229 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ctr_b_1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1243 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ctr_b_z_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1257 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      wrdl_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     plk_td1_reg     | Flip-flop |  26   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     plk_td2_reg     | Flip-flop |  26   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     plk_td3_reg     | Flip-flop |  26   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     plk_td4_reg     | Flip-flop |  26   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     plk_td5_reg     | Flip-flop |  26   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     plk_td6_reg     | Flip-flop |  26   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      plkm_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     index_1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1418 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      wrd_3_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      wrd_1_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      wrd_2_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1431 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ctr_2_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      ctr_5_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      ctr_4_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1445 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      row5_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      row1_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      row2_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      row3_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      row4_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1471 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      tan_4_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      tan_1_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      tan_2_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      tan_3_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1486 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      pld_4_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      pld_1_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      pld_2_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      pld_3_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1510 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    mr_5_reg_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    mr_1_reg_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    mr_2_reg_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    mr_3_reg_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    mr_4_reg_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1737 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      lmax_reg       | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine CAD line 1875 in file
+                '../01_RTL/CAD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     out_reg_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     CS_OUT_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   calcu_start_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     p_value_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     p_value_reg     | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    out_value_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (CAD)
+Elaborated 1 design.
+Current design is now 'CAD'.
+1
+# (B-2) read_sverilog
+#read_sverilog $DESIGN\.v
+# (B-3) set current design
+current_design $DESIGN
+Current design is 'CAD'.
+{CAD}
+link
+
+  Linking design 'CAD'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  CAD                         /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/02_SYN/CAD.db
+  fsa0m_a_generic_core_ss1p62v125c (library) /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db
+  fsa0m_a_generic_core_ff1p98vm40c (library) /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ff1p98vm40c.db
+  fsa0m_a_t33_generic_io_ss1p62v125c (library) /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_ss1p62v125c.db
+  fsa0m_a_t33_generic_io_tt1p8v25c (library) /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_tt1p8v25c.db
+  T_k3_WC (library)           /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_k3_WC.db
+  T_o1_WC (library)           /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o1_WC.db
+  T_o2_WC (library)           /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o2_WC.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb
+
+1
+#======================================================
+#  (C) Global Setting
+#======================================================
+set_wire_load_mode top
+1
+#set_operating_conditions -max WCCOM -min BCCOM
+# set_wire_load_model -name umc18_wl10 -library slow
+#======================================================
+#  (D) Set Design Constraints
+#======================================================
+# (D-1) Setting Clock Constraints
+create_clock -name clk -period $CYCLE [get_ports clk] 
+1
+set_dont_touch_network             [get_clocks clk]
+1
+set_fix_hold                       [get_clocks clk]
+1
+set_clock_uncertainty       0.1    [get_clocks clk]
+1
+# set_clock_latency   -source 0      [get_clocks clk]
+# set_clock_latency           1      [get_clocks clk] 
+set_input_transition        0.5    [all_inputs] 
+1
+set_clock_transition        0.1    [all_clocks] 
+1
+# (D-2) Setting in/out Constraints
+set_input_delay   -max  $INPUT_DLY  -clock clk   [all_inputs] ;  # set_up time check 
+1
+set_input_delay   -min  0           -clock clk   [all_inputs] ;  # hold   time check 
+1
+set_output_delay  -max  $OUTPUT_DLY -clock clk   [all_outputs] ; # set_up time check 
+1
+set_output_delay  -min  0           -clock clk   [all_outputs] ; # hold   time check 
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+#set_max_delay $CYCLE -from [all_inputs] -to [all_outputs]
+# (D-3) Setting Design Environment
+# set_driving_cell -library umc18io3v5v_slow -lib_cell P2C    -pin {Y}  [get_ports clk]
+# set_driving_cell -library umc18io3v5v_slow -lib_cell P2C    -pin {Y}  [remove_from_collection [all_inputs] [get_ports clk]]
+# set_load  [load_of "umc18io3v5v_slow/P8C/A"]       [all_outputs] ; # ~= 0.038
+set_load 0.05 [all_outputs]
+1
+# (D-4) Setting DRC Constraint
+#set_max_delay           0     ; # Optimize delay max effort                 
+#set_max_area            0      ; # Optimize area max effort           
+set_max_transition      3       [all_inputs]   ; # U18 LUT Max Transition Value  
+1
+set_max_capacitance     0.15    [all_inputs]   ; # U18 LUT Max Capacitance Value
+1
+set_max_fanout          10      [all_inputs]
+1
+# set_dont_use slow/JKFF*
+#set_dont_touch [get_cells core_reg_macro]
+#set hdlin_ff_always_sync_set_reset true
+# (D-5) Report Clock skew
+report_clock -skew clk
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'alt1' from '(none)' to 'G5K'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'G5K'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'G5K'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'G5K'. (OPT-170)
+Information: Updating design information... (UID-85)
+Warning: Design 'CAD' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clock_skew
+Design : CAD
+Version: T-2022.03
+Date   : Thu Dec 14 00:58:18 2023
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+clk                 -         -         -         -      0.10      0.10
+
+                 Max Transition      Min Transition
+Object           Rise      Fall      Rise      Fall
+-------------------------------------------------------
+clk              0.10      0.10      0.10      0.10
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+#======================================================
+#  (E) Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_ss1p62v125c.db"
+Analyzing: "/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_tt1p8v25c.db"
+Analyzing: "/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_k3_WC.db"
+Analyzing: "/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o1_WC.db"
+Analyzing: "/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o2_WC.db"
+Analyzing: "/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db"
+Analyzing: "/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ff1p98vm40c.db"
+Library analysis succeeded.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT WLM                                                           |
+| Comand line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 4462                                   |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 882                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 746                                    |
+| Number of Dont Touch nets                               | 1                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 201 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'CAD'
+
+  Loading target library 'fsa0m_a_generic_core_ff1p98vm40c'
+  Loading target library 'fsa0m_a_t33_generic_io_ss1p62v125c'
+  Loading target library 'fsa0m_a_t33_generic_io_tt1p8v25c'
+  Loading target library 'T_k3_WC'
+  Loading target library 'T_o1_WC'
+  Loading target library 'T_o2_WC'
+Loaded alib file './alib-52/fsa0m_a_generic_core_ss1p62v125c.db.alib'
+Loaded alib file './alib-52/fsa0m_a_generic_core_ff1p98vm40c.db.alib'
+Loaded alib file './alib-52/fsa0m_a_t33_generic_io_ss1p62v125c.db.alib' (placeholder)
+Loaded alib file './alib-52/fsa0m_a_t33_generic_io_tt1p8v25c.db.alib' (placeholder)
+Loaded alib file './alib-52/T_k3_WC.db.alib' (placeholder)
+Loaded alib file './alib-52/T_o1_WC.db.alib' (placeholder)
+Loaded alib file './alib-52/T_o2_WC.db.alib' (placeholder)
+Warning: Operating condition WCCOM set on design CAD has different process,
+voltage and temperatures parameters than the parameters at which target library 
+fsa0m_a_generic_core_ff1p98vm40c is characterized. Delays may be inaccurate as a result. (OPT-998)
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'CAD'
+Information: Added key list 'DesignWare' to design 'CAD'. (DDB-72)
+Information: The register 'CS_INV__reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV2_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV1_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV__reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV2_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV1_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV__reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV2_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV1_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV__reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV2_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV1_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV__reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV2_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV1_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV__reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV2_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV1_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV__reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV2_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV1_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV__reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV2_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV1_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_INV_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'mand__reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'mand__reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'mand__reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'value_trace_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'value_trace_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'value_trace_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'diffect_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'diffect_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'diffect_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'rps_t_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ctr_end_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ctr_end_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ctr_end_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_vd_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_vd_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_vd_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_valend_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_valend_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_valend_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_valend_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_valend_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_valend_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_valend_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'set_valend_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_OUT_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_OUT_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'CS_OUT_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'out_reg_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: In design 'CAD', the register 'set_valend_reg[1]' is removed because it is merged to 'set_vd_reg[0]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_vd_reg[2]' is removed because it is merged to 'set_vd_reg[1]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_vd_reg[5]' is removed because it is merged to 'set_vd_reg[1]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_valend_reg[5]' is removed because it is merged to 'set_vd_reg[3]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_valend_reg[7]' is removed because it is merged to 'set_vd_reg[7]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_valend_reg[8]' is removed because it is merged to 'set_vd_reg[8]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_valend_reg[9]' is removed because it is merged to 'set_vd_reg[9]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_valend_reg[10]' is removed because it is merged to 'set_vd_reg[10]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_valend_reg[11]' is removed because it is merged to 'set_vd_reg[11]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_valend_reg[12]' is removed because it is merged to 'set_vd_reg[12]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_vd_reg[14]' is removed because it is merged to 'set_vd_reg[13]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_valend_reg[13]' is removed because it is merged to 'set_vd_reg[13]'. (OPT-1215)
+Information: In design 'CAD', the register 'set_valend_reg[14]' is removed because it is merged to 'set_vd_reg[13]'. (OPT-1215)
+ Implement Synthetic for 'CAD'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIE1' in the library 'fsa0m_a_generic_core_ss1p62v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIE0' in the library 'fsa0m_a_generic_core_ss1p62v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'BHD1' in the library 'fsa0m_a_generic_core_ss1p62v125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: The register 'rps_t_reg[11]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'CAD_RSOP_961'. (DDB-72)
+Information: The register 'ctr_3_reg[10]' will be removed. (OPT-1207)
+Information: The register 'ctr_3_reg[9]' will be removed. (OPT-1207)
+Information: The register 'ctr_3_reg[8]' will be removed. (OPT-1207)
+Information: The register 'ctr_3_reg[7]' will be removed. (OPT-1207)
+  Mapping Optimization (Phase 1)
+Information: The register 'plk_td1_reg[25]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[24]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[23]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[22]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[21]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[20]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[19]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[18]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[17]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[16]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[15]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[14]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[13]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[12]' will be removed. (OPT-1207)
+Information: The register 'plk_td1_reg[11]' will be removed. (OPT-1207)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:42 1154096.0      0.00       0.0     407.2                           187141632.0000      0.00  
+    0:00:42 1154017.8      0.00       0.0     407.2                           187137424.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:42 1154017.8      0.00       0.0     407.2                           187137424.0000      0.00  
+    0:00:42 1154017.8      0.00       0.0     407.2                           187137424.0000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'CAD_DP_OP_945_196_6607_3'
+  Mapping 'CAD_DP_OP_881_194_9339_3'
+  Mapping 'CAD_DP_OP_967_193_2374_3'
+  Mapping 'CAD_DP_OP_903_195_8108_3'
+  Mapping 'CAD_DP_OP_923_192_3875_3'
+  Mapping 'CAD_DP_OP_881_194_9339_4'
+  Mapping 'CAD_DP_OP_945_196_6607_4'
+  Mapping 'CAD_DP_OP_903_195_8108_4'
+  Mapping 'CAD_DP_OP_967_193_2374_4'
+Information: The register 'plk_td6_reg[25]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[24]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[23]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[22]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[21]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[20]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[19]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[18]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[17]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[16]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[15]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[14]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[13]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[12]' will be removed. (OPT-1207)
+Information: The register 'plk_td6_reg[11]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[25]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[24]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[23]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[22]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[21]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[20]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[19]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[18]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[17]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[16]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[15]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[14]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[13]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[12]' will be removed. (OPT-1207)
+Information: The register 'plk_td3_reg[11]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[25]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[24]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[23]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[22]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[21]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[20]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[19]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[18]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[17]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[16]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[15]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[14]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[13]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[12]' will be removed. (OPT-1207)
+Information: The register 'plk_td2_reg[11]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[25]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[24]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[23]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[22]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[21]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[20]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[19]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[18]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[17]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[16]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[15]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[14]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[13]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[12]' will be removed. (OPT-1207)
+Information: The register 'plk_td4_reg[11]' will be removed. (OPT-1207)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:45 1102005.5      0.00       0.0     155.3                           182260720.0000      0.00  
+    0:00:45 1102005.5      0.00       0.0     155.3                           182260720.0000      0.00  
+    0:00:45 1102005.5      0.00       0.0     155.3                           182260720.0000      0.00  
+    0:00:45 1102005.5      0.00       0.0     155.3                           182260720.0000      0.00  
+    0:00:46 1100577.5      0.00       0.0     154.6                           182181568.0000      0.00  
+    0:00:46 1098752.6      0.00       0.0     123.1                           181964112.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:47 1094237.3      0.00       0.0     122.0                           181570448.0000      0.00  
+    0:00:47 1094237.3      0.00       0.0     122.0                           181570448.0000      0.00  
+    0:00:47 1094237.3      0.00       0.0     122.0                           181570448.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_fanout)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:48 1088325.2      0.00       0.0     119.9                           180937024.0000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:48 1088387.7      0.00       0.0       0.0                           180941280.0000      0.00  
+    0:00:48 1088387.7      0.00       0.0       0.0                           180941280.0000      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:48 1088387.7      0.00       0.0       0.0                           180941280.0000      0.00  
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+    0:00:49 1079822.6      0.00       0.0       0.0                           180125440.0000      0.00  
+    0:00:49 1079822.6      0.00       0.0       0.0                           180125440.0000      0.00  
+    0:00:49 1079822.6      0.00       0.0       0.0                           180125440.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:49 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:50 1079719.5      0.00       0.0       0.0                           180114576.0000      0.00  
+    0:00:50 1078800.8      0.00       0.0       0.0                           180035536.0000      0.00  
+    0:00:50 1078800.8      0.00       0.0       0.0                           180035536.0000      0.00  
+    0:00:50 1078800.8      0.00       0.0       0.0                           180035536.0000      0.00  
+    0:00:50 1078791.4      0.00       0.0       0.0                           180034096.0000      0.00  
+    0:00:51 1078588.3      0.00       0.0       0.0                           180021184.0000      0.00  
+    0:00:51 1078588.3      0.00       0.0       0.0                           180021184.0000      0.00  
+    0:00:51 1078588.3      0.00       0.0       0.0                           180021184.0000      0.00  
+    0:00:51 1078588.3      0.00       0.0       0.0                           180021184.0000      0.00  
+    0:00:51 1078588.3      0.00       0.0       0.0                           180021184.0000      0.00  
+    0:00:51 1078588.3      0.00       0.0       0.0                           180021184.0000      0.00  
+    0:00:51 1078544.5      0.00       0.0       0.0                           180017824.0000      0.00  
+Loading db file '/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db'
+Loading db file '/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ff1p98vm40c.db'
+Loading db file '/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_ss1p62v125c.db'
+Loading db file '/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_t33_generic_io_tt1p8v25c.db'
+Loading db file '/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_k3_WC.db'
+Loading db file '/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o1_WC.db'
+Loading db file '/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o2_WC.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'fsa0m_a_generic_core_ff1p98vm40c'
+  Loading target library 'fsa0m_a_t33_generic_io_ss1p62v125c'
+  Loading target library 'fsa0m_a_t33_generic_io_tt1p8v25c'
+  Loading target library 'T_k3_WC'
+  Loading target library 'T_o1_WC'
+  Loading target library 'T_o2_WC'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated black box outputs. (PWR-428)
+1
+#uniquify
+#compile
+#======================================================
+#  (F) Output Reports 
+#======================================================
+report_design  >  Report/$DESIGN\.design
+report_resource >  Report/$DESIGN\.resource
+report_timing -max_paths 3 >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_power > Report/$DESIGN\.power
+report_clock > Report/$DESIGN\.clock
+report_port >  Report/$DESIGN\.port
+report_power >  Report/$DESIGN\.power
+#report_reference > Report/$DESIGN\.reference
+#======================================================
+#  (G) Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  (H) Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/02_SYN/Netlist/CAD_SYN.v'.
+1
+write -format ddc     -hierarchy -output $DESIGN\_SYN.ddc
+Writing ddc file 'CAD_SYN.ddc'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab129/Lab05/Exercise/02_SYN/Netlist/CAD_SYN.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  (I) Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : CAD
+Version: T-2022.03
+Date   : Thu Dec 14 01:02:24 2023
+****************************************
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db)
+    T_k3_WC (File: /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_k3_WC.db)
+    T_o2_WC (File: /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o2_WC.db)
+    T_o1_WC (File: /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o1_WC.db)
+
+Number of ports:                           21
+Number of nets:                          4974
+Number of cells:                         4572
+Number of combinational cells:           3856
+Number of sequential cells:               713
+Number of macros/black boxes:               3
+Number of buf/inv:                        557
+Number of references:                      77
+
+Combinational area:              69136.200355
+Buf/Inv area:                     3799.756762
+Noncombinational area:           42431.659531
+Macro/Black Box area:           966976.679688
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:               1078544.539573
+Total area:                 undefined
+1
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CAD
+Version: T-2022.03
+Date   : Thu Dec 14 01:02:24 2023
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: top
+
+  Startpoint: in_valid2 (input port clocked by clk)
+  Endpoint: plk_td5_reg_25_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CAD                enG200K               fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    10.00      10.00 f
+  in_valid2 (in)                           0.00      10.00 f
+  U2928/O (NR2P)                           0.49      10.49 r
+  U2360/O (ND3)                            0.33      10.82 f
+  U2759/O (NR2)                            0.48      11.30 r
+  U3949/O (INV1S)                          0.45      11.75 f
+  U2747/O (ND2S)                           0.49      12.23 r
+  U2396/O (AN4B1)                          0.42      12.66 f
+  U3265/O (BUF2)                           0.64      13.30 f
+  U2503/O (NR2)                            0.49      13.79 r
+  U2672/O (NR2)                            0.25      14.04 f
+  U2261/O (INV1S)                          0.36      14.40 r
+  U3955/O (ND2P)                           0.13      14.53 f
+  U3302/O (NR2)                            0.39      14.93 r
+  U2756/O (ND2)                            0.38      15.30 f
+  U2495/O (NR2P)                           0.26      15.57 r
+  U2227/O (ND2S)                           0.29      15.86 f
+  U2204/O (NR2P)                           0.23      16.08 r
+  U2203/O (AOI12H)                         0.18      16.26 f
+  U2202/O (OAI12H)                         0.35      16.61 r
+  U3313/O (AOI12HS)                        0.29      16.91 f
+  U2201/O (OAI12H)                         0.32      17.23 r
+  U2433/O (AOI12HS)                        0.33      17.56 f
+  U2225/O (OAI12HP)                        0.30      17.86 r
+  U2224/O (AOI12HP)                        0.17      18.02 f
+  U4437/O (OAI12HT)                        0.22      18.25 r
+  U2223/O (AOI12HP)                        0.15      18.39 f
+  U2179/O (OAI12HP)                        0.23      18.62 r
+  U2194/O (AOI12H)                         0.17      18.80 f
+  U3132/O (OAI12HS)                        0.30      19.10 r
+  U3131/O (XNR2HS)                         0.21      19.30 r
+  U4687/O (MOAI1S)                         0.36      19.67 r
+  plk_td5_reg_25_/D (QDFFRBS)              0.00      19.67 r
+  data arrival time                                  19.67
+
+  clock clk (rise edge)                   20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -0.10      19.90
+  plk_td5_reg_25_/CK (QDFFRBS)             0.00      19.90 r
+  library setup time                      -0.23      19.67
+  data required time                                 19.67
+  -----------------------------------------------------------
+  data required time                                 19.67
+  data arrival time                                 -19.67
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+exit
+
+Memory usage for this session 445 Mbytes.
+Memory usage for this session including child processes 573 Mbytes.
+CPU usage for this session 258 seconds ( 0.07 hours ).
+Elapsed time for this session 254 seconds ( 0.07 hours ).
+
+Thank you...
+

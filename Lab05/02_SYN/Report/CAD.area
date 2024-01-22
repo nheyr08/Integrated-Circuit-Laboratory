@@ -1,0 +1,33 @@
+ 
+****************************************
+Report : area
+Design : CAD
+Version: T-2022.03
+Date   : Thu Dec 14 01:02:22 2023
+****************************************
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db)
+    T_k3_WC (File: /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_k3_WC.db)
+    T_o2_WC (File: /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o2_WC.db)
+    T_o1_WC (File: /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o1_WC.db)
+
+Number of ports:                           21
+Number of nets:                          4974
+Number of cells:                         4572
+Number of combinational cells:           3856
+Number of sequential cells:               713
+Number of macros/black boxes:               3
+Number of buf/inv:                        557
+Number of references:                      77
+
+Combinational area:              69136.200355
+Buf/Inv area:                     3799.756762
+Noncombinational area:           42431.659531
+Macro/Black Box area:           966976.679688
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:               1078544.539573
+Total area:                 undefined
+1

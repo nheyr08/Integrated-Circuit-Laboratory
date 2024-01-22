@@ -1,0 +1,61 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : CAD
+Version: T-2022.03
+Date   : Thu Dec 14 01:02:23 2023
+****************************************
+
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db)
+    T_k3_WC (File: /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_k3_WC.db)
+    T_o2_WC (File: /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o2_WC.db)
+    T_o1_WC (File: /RAID2/COURSE/iclab/iclab129/Lab05/Exercise/04_MEM/T_o1_WC.db)
+
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+CAD                    enG200K           fsa0m_a_generic_core_ss1p62v125c
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  27.8557 mW   (98%)
+  Net Switching Power  = 477.6000 uW    (2%)
+                         ---------
+Total Dynamic Power    =  28.3333 mW  (100%)
+
+Cell Leakage Power     = 179.6876 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory            26.2647        1.2863e-02        1.7413e+08           26.4517  (  92.77%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      1.3614            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.1096        9.3070e-02        2.3303e+06            1.5665  (   5.49%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.1200            0.3716        3.2283e+06            0.4948  (   1.74%)
+--------------------------------------------------------------------------------------------------
+Total             27.8557 mW         0.4776 mW     1.7969e+08 pW        28.5129 mW
+1

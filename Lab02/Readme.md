@@ -1,3 +1,6 @@
+## Calculation on Coordinates
+
+
 In this lab the focus is on sequential circuits, The Exercise is to Design a module that performs three modes of operation.
 
 **Trapezoidal rendering**: Given a trapezoid coordinates, find the points or pixels that line within the area covered by the geometric figure.
@@ -6,3 +9,5 @@ In this lab the focus is on sequential circuits, The Exercise is to Design a mod
 as two points on the line.
 
 **Area Computing**: Given four points compute the area in between them to a certain accuracy. 
+
+![image](https://github.com/nheyr08/Integrated-Circuit-Laboratory/assets/64657102/79d4d957-ab05-44c6-99a1-9018562ef3ff)

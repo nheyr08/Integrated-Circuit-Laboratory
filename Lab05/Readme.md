@@ -1,4 +1,4 @@
- ## Matrix convolution, max pooling and transposed convolution
+ ## Matrix convolution, max pooling and transposed convolution With SRAM
 
  
 

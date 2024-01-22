@@ -1,0 +1,38 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Mon Jan 22 14:31:15 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      4
+    Unconnected ports (LINT-28)                                     4
+
+Cells                                                               1
+    Cells do not drive (LINT-1)                                     1
+
+Nets                                                               13
+    Unloaded nets (LINT-2)                                         13
+--------------------------------------------------------------------------------
+
+Warning: In design 'BRIDGE', cell 'B_389' does not drive any nets. (LINT-1)
+Warning: In design 'BRIDGE', net 'net1220' driven by pin 'C6971/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1219' driven by pin 'C6953/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1218' driven by pin 'C6933/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1217' driven by pin 'C6189/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1216' driven by pin 'C6185/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1215' driven by pin 'C6181/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1214' driven by pin 'C6177/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1213' driven by pin 'C6173/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1212' driven by pin 'C6169/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1211' driven by pin 'C6165/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1210' driven by pin 'C6161/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1209' driven by pin 'C6157/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', net 'net1208' driven by pin 'C6153/Z' has no loads. (LINT-2)
+Warning: In design 'BRIDGE', port 'R_RESP[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'BRIDGE', port 'R_RESP[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'BRIDGE', port 'B_RESP[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'BRIDGE', port 'B_RESP[0]' is not connected to any nets. (LINT-28)
+1

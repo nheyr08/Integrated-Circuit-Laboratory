@@ -1,0 +1,54 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : BRIDGE
+Version: T-2022.03
+Date   : Mon Jan 22 14:32:19 2024
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 689.3631 uW   (97%)
+  Net Switching Power  =  24.5160 uW    (3%)
+                         ---------
+Total Dynamic Power    = 713.8791 uW  (100%)
+
+Cell Leakage Power     =   3.2847 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.6371            0.0000            0.0000            0.0000  (   0.00%)  i
+register       2.8353e-02        2.8224e-03        1.6646e+06            0.6699  (  93.41%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.3951e-02        2.1694e-02        1.6201e+06        4.7264e-02  (   6.59%)
+--------------------------------------------------------------------------------------------------
+Total              0.6894 mW     2.4516e-02 mW     3.2847e+06 pW         0.7172 mW
+1

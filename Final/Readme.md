@@ -1,4 +1,4 @@
-## 16-BIT RISC CPU 
+# 16-BIT RISC CPU 
 ### Pipelined RISC Processor in Verilog with Post-Synthesis Simulations:
 
 During the final of Ic lab, I Developed a 16-bit Reduced Instruction Set Computing (RISC) processor using Verilog, featuring pipeline stages for efficient instruction execution.

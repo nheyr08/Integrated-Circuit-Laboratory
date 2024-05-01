@@ -4,7 +4,7 @@ However, I persevered and am sharing my codes here for reference.
 
 
 This repository contains 13 labs, Midterm project and Final project during the IC lab class.
-Each lab requires students to write their own pattern and testbenches in order to verify their own design.
+Each lab requires students to write their own pattern and testbenches in order to verify their own design in Verilog/Systemverilog.
 
 --- 
 ## FINAL Project (16-BIT RISC CPU) 

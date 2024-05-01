@@ -1,6 +1,13 @@
-# Integrated Circuit Laboratory 
+# Integrated Circuit Laboratory (Fall 2023)
+I took this course as the only international student, and I found it particularly challenging.
+However, I persevered and am sharing my codes here for reference.
 
-## FINAL ---> 16-BIT RISC CPU 
+
+This repository contains 13 labs, Midterm project and Final project during the IC lab class.
+each lab requires students to write their own pattern and testbenches in order to verify their own design.
+
+--- 
+## FINAL Project (16-BIT RISC CPU) 
 ### Pipelined RISC Processor in Verilog with Post-Synthesis Simulations:
 
 During the final of Ic lab, I Developed a 16-bit Reduced Instruction Set Computing (RISC) processor using Verilog, featuring pipeline stages for efficient instruction execution.
@@ -30,10 +37,8 @@ Optimized the clock tree structure, reducing the number of clock buffers to enha
 ### Physical design layout in Innovus:
 <img width="822" alt="Screen Shot 2024-02-29 at 10 47 04 PM" src="https://github.com/nheyr08/Integrated-Circuit-Laboratory/assets/64657102/af7068e3-c1c0-4754-a37c-0c4980c764b3">
 
-
-[![Top Langs](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=nheyr08)](https://github.com/anuraghazra/github-readme-stats)
-
 ## Lab1 -> Supper MOSFET Calculator(SMC)
+---
 In this lab the focus is on Boolean circuits (Combinational).
 
 Given 6 Mosfets Operation region perform the calculations for their ID(current) or Gm calculation
@@ -42,8 +47,9 @@ Then Sort the values found for the 6 Mosfets, and Output the Max or Min value ba
 
 ![image](https://github.com/nheyr08/Integrated-Circuit-Laboratory/assets/64657102/76841a98-e16c-4525-af32-942f7863f1b0)
 
-## Lab2 -> Calculation on Coordinates
 
+## Lab2 -> Calculation on Coordinates
+---
 
 In this lab the focus is on sequential circuits, The Exercise is to Design a module that performs three modes of operation.
 
@@ -56,8 +62,9 @@ as two points on the line.
 
 ![image](https://github.com/nheyr08/Integrated-Circuit-Laboratory/assets/64657102/79d4d957-ab05-44c6-99a1-9018562ef3ff)
 
-## Lab3 -> ## AXI-SPI Data Bridge
 
+## Lab3 -> AXI-SPI Data Bridge
+---
 In this lab, the task is to Write my own PATTERN and develop a pseudo SD card by referencing 
 the provided design specifications and the SD card protocol. 
 
@@ -69,8 +76,8 @@ Once the PATTERN and pseudo SD card were complete,I had to design a bridge modul
 DRAM and the SD card.
 
 ![image](https://github.com/nheyr08/Integrated-Circuit-Laboratory/assets/64657102/f7638475-d53c-4934-a97e-9243a07af0fd)
-## Lab4 -> Siamese Neural Network accelarator
-
+## Lab4 -> Sianamese Neural Network accelarator
+---
 The Siamese neural network is a type of neural network architecture designed for similarity
 learning and feature extraction tasks. It is called "Siamese" because the network consists of two
 identical subnetworks, known as twin networks, which share the same architecture and parameters.
@@ -87,7 +94,7 @@ recommender systems. In this lab such a Neural Network is implemented using the 
 
 **My Total cell area--------->** 2 299 825
 ## Lab5 -> Matrix convolution, max pooling and transposed convolution With SRAM cache
-
+---
 
 The input image matrix size are 8x8, 16x16 or 32x32. The input kernel matrix size is set to
 5x5. And needs to perform 2x2 max pooling after the convolution.
@@ -111,13 +118,26 @@ All numbers are signed integers and expressed in 2’s complement format.
 
 ![image](https://github.com/nheyr08/Integrated-Circuit-Laboratory/assets/64657102/e3b02e5b-321c-4d04-a007-89d85c3f0e78)
 
-## Lab6  
-## Lab7 ramdom number genarator | FIFO design | (Cross Clock Domain)
-## Lab8 Low Power design, Or Clock gated | Circuit Optimization
-## Midterm Maze Routing Accelarator | (BFS-modified)-> Lee's Algorithm
-## Lab9 SystemVerilog, Interfacing | Constrained Random Stimulus Generation | DRAM interaction
-## Lab10 SVA | Coverage Checkers
-## Lab11 Formal Verification -1
-## Lab12 Formal Verification -2
-## Lab13 APR flow and IR drop optimization
+## Lab6 
+Sort IP | Tool Command Language (TCL)
+## Lab7 
+ramdom number genarator | FIFO design | (Cross Clock Domain)
+## Lab8
+Low Power design, Or Clock gated | Circuit Optimization
+## Midterm 
+Maze Routing Accelarator | (BFS-modified)-> Lee's Algorithm
+## Lab9 
+SystemVerilog, Interfacing | Constrained Random Stimulus Generation | DRAM interaction
+## Lab10
+System Verilog Assertion (SVA) | Coverage | Checkers
+## Lab11
+Formal Verification -1 (JasperGold)
+## Lab12
+Formal Verification -2 (JasperGold)
+## Lab13
+APR flow and IR drop optimization (Innovus)
 
+---
+[![Top Langs](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=nheyr08)](https://github.com/anuraghazra/github-readme-stats)
+
+Thanks for reading~

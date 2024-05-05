@@ -37,7 +37,7 @@ Optimized the clock tree structure, reducing the number of clock buffers to enha
 ### Physical design layout in Innovus:
 <img width="822" alt="Screen Shot 2024-02-29 at 10 47 04 PM" src="https://github.com/nheyr08/Integrated-Circuit-Laboratory/assets/64657102/af7068e3-c1c0-4754-a37c-0c4980c764b3">
 
-## Lab1 -> Supper MOSFET Calculator(SMC)
+## Lab1 -> Super MOSFET Calculator(SMC)
 ---
 In this lab the focus is on Boolean circuits (Combinational).
 
